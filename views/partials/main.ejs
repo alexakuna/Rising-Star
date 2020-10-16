@@ -1,0 +1,16 @@
+<main class="container img-wrapper-background height-main">
+    <h1><%= title %></h1>
+    <p style="color: white;font-size: 2em"><%= description %></p>
+    <div class="row">
+        <% for(let i = 0; news.length > i; i++) { %>
+            <div class="col s12 m4">
+                <div class="card-panel white">
+                    <span class="blue-grey-text">
+                        I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                    </span>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</main>
