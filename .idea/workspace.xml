@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="" />
+    <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/materialize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/aboutus.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/aboutus.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/contacts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/contacts.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/feedbacks.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/feedbacks.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/request.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/request.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/timetable.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/timetable.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/video.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/video.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,8 +28,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -30,11 +51,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.67" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/javascripts" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/javascripts" />
+      <recent name="$PROJECT_DIR$/accets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,6 +80,8 @@
       <workItem from="1602680013321" duration="8400000" />
       <workItem from="1602704558972" duration="6226000" />
       <workItem from="1602783857858" duration="17830000" />
+      <workItem from="1602855559854" duration="7123000" />
+      <workItem from="1602953757963" duration="75000" />
     </task>
     <servers />
   </component>
