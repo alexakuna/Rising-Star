@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
+const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
 const aboutusRoute = require('./routes/aboutus');
@@ -25,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(loginPage)
 app.use(homeRouter);
 app.use(requestRoute);
 app.use(contactsRoute);

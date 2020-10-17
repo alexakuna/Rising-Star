@@ -1,7 +1,8 @@
 <header>
     <nav class="z-depth-0 purple darken-4">
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo"><%= title %></a>
+
+            <a href="#!" class="brand-logo r-logo"><%= title %></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down m-right">
                 <% for(let i = 0; navLinks.length > i; i++) { %>
@@ -10,7 +11,11 @@
                     </li>
                 <% } %>
             </ul>
+            <div class="login-wrapper">
+                <span><a href="/login">Вход</a></span>
+            </div>
         </div>
+
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
