@@ -24,15 +24,20 @@ h1 {
   color: white;
 }
 #btn-close {
-  width: 25px !important;
-  height: 25px !important;
+  width: 30px !important;
+  height: 30px !important;
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 7px;
   cursor: pointer;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
 }
 #btn-close a {
+  display: flex;
   padding: 0 !important;
+  height: inherit !important;
 }
 .login-wrapper {
   position: absolute;
