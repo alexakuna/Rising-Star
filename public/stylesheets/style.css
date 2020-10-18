@@ -24,8 +24,6 @@ h1 {
   color: white;
 }
 #btn-close {
-  width: 30px !important;
-  height: 30px !important;
   position: absolute;
   top: 5px;
   right: 7px;
@@ -38,6 +36,9 @@ h1 {
   display: flex;
   padding: 0 !important;
   height: inherit !important;
+}
+#btn-close a span {
+  font-size: 34px !important;
 }
 .login-wrapper {
   position: absolute;
