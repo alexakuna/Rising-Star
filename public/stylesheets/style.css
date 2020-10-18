@@ -23,6 +23,17 @@ main {
 h1 {
   color: white;
 }
+#btn-close {
+  width: 25px !important;
+  height: 25px !important;
+  position: absolute;
+  top: 0;
+  right: 7px;
+  cursor: pointer;
+}
+#btn-close a {
+  padding: 0 !important;
+}
 .login-wrapper {
   position: absolute;
   display: inline-block;

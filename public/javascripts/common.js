@@ -7,8 +7,12 @@
 //     console.log(e)
 // }
 document.addEventListener('DOMContentLoaded', function() {
-    let elems = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elems);
+    //const close = document.querySelector('#btn-close')
+    const elem = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elem)
+    // close.addEventListener('click', () => {
+    //     elem[0].close()
+    // } )
 });
 
 
