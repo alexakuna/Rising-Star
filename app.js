@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
+const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
 const aboutusRoute = require('./routes/aboutus');
@@ -25,7 +26,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('*', (req, res, next) => {
+    const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
+    ip === '159.224.186.64' ? app.locals.isVisible = true : app.locals.isVisible = false
+    next()
+})
 
+app.use(loginPage)
 app.use(homeRouter);
 app.use(requestRoute);
 app.use(contactsRoute);

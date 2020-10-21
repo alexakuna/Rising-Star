@@ -6,7 +6,7 @@ body {
   flex-direction: column;
 }
 .m-right {
-  margin-right: 10px;
+  margin-right: 60px;
 }
 html {
   background-repeat: no-repeat;
@@ -23,3 +23,41 @@ main {
 h1 {
   color: white;
 }
+#btn-close {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+#btn-close a {
+  display: flex;
+  padding: 0 !important;
+  height: inherit !important;
+}
+#btn-close a span {
+  font-size: 34px !important;
+}
+.login-wrapper {
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+}
+.r-logo {
+  margin-left: 10px;
+}
+@media only screen and (max-width:768px) {
+  html {
+    background-image: none !important;
+    background: rgba(156, 39, 176, 1);
+  }
+}
+@media only screen and (max-width:320px) {
+  .sidenav {
+    width: 250px !important;
+  }
+}
+
+
