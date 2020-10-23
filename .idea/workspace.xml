@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/layouts/mainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/layouts/mainLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/app/sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/app/sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/app/navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/app/navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
