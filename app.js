@@ -38,16 +38,17 @@ app.get('*', (req, res, next) => {
         : app.locals.isVisible = false
     next()
 })
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/dist'));
+
+
     app.get('/login', (req, res) => {
+        app.use(express.static('client/dist'))
         res.sendFile(
             path.resolve(
                 __dirname, 'client', 'dist', 'index.html'
             )
         )
     })
-}
+
 
 
 app.use(loginPage)
