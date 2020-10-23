@@ -26,6 +26,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.get('*', (req, res, next) => {
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     ip === '159.224.186.64'
@@ -36,6 +38,17 @@ app.get('*', (req, res, next) => {
         : app.locals.isVisible = false
     next()
 })
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/dist'));
+    app.get('/login', (req, res) => {
+        res.sendFile(
+            path.resolve(
+                __dirname, 'client', 'dist', 'index.html'
+            )
+        )
+    })
+}
+
 
 app.use(loginPage)
 app.use(homeRouter);
