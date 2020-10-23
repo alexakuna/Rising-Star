@@ -38,8 +38,17 @@ app.get('*', (req, res, next) => {
         : app.locals.isVisible = false
     next()
 })
+app.use(express.static('client/dist'))
+router.get('/login', (req, res) => {
+    if (process.env.NODE_ENV === 'production') {
+        res.sendFile(
+            path.resolve(
+                __dirname, 'client', 'dist', 'index.html'
+            )
+        )
+    }
+})
 
-app.use(loginPage)
 app.use(homeRouter);
 app.use(requestRoute);
 app.use(contactsRoute);
