@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
-const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
 const aboutusRoute = require('./routes/aboutus');
@@ -40,7 +39,7 @@ app.get('*', (req, res, next) => {
 })
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/dist'))
-    router.get('*', (req, res) => {
+    router.get('/login', (req, res) => {
         if (process.env.NODE_ENV === 'production') {
             res.sendFile(
                 path.resolve(
