@@ -41,12 +41,13 @@ app.get('*', (req, res, next) => {
 
 
     app.get('/login', (req, res) => {
-        app.use(express.static('client/dist'))
-        res.sendFile(
-            path.resolve(
-                __dirname, 'client', 'dist', 'index.html'
-            )
-        )
+        alert("hello")
+        // app.use(express.static('client/dist'))
+        // res.sendFile(
+        //     path.resolve(
+        //         __dirname, 'client', 'dist', 'index.html'
+        //     )
+        // )
     })
 
 
