@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
+const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
 const aboutusRoute = require('./routes/aboutus');
@@ -37,18 +38,8 @@ app.get('*', (req, res, next) => {
         : app.locals.isVisible = false
     next()
 })
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/dist'))
-    router.get('/login', (req, res) => {
-        if (process.env.NODE_ENV === 'production') {
-            res.sendFile(
-                path.resolve(
-                    __dirname, 'client', 'dist', 'index.html'
-                )
-            )
-        }
-    })
-}
+
+app.use(loginPage)
 app.use(homeRouter);
 app.use(requestRoute);
 app.use(contactsRoute);
