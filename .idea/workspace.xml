@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -78,6 +83,7 @@
       <workItem from="1603011030947" duration="7819000" />
       <workItem from="1603034610573" duration="15337000" />
       <workItem from="1603139395578" duration="7534000" />
+      <workItem from="1603456075172" duration="2295000" />
     </task>
     <servers />
   </component>
@@ -93,25 +99,25 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1603127053714" />
-    <state width="1345" height="196" key="GridCell.Tab.0.bottom" timestamp="1602437370030">
-      <screen x="0" y="23" width="1366" height="685" />
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom" timestamp="1603468253164">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1602414189472" />
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1603468253164" />
     <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.23.1366.685@0.23.1366.685" timestamp="1602437370030" />
-    <state width="1345" height="196" key="GridCell.Tab.0.center" timestamp="1602437370028">
-      <screen x="0" y="23" width="1366" height="685" />
+    <state width="1345" height="196" key="GridCell.Tab.0.center" timestamp="1603468253162">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1602414189470" />
+    <state width="1345" height="196" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1603468253162" />
     <state width="1345" height="196" key="GridCell.Tab.0.center/0.23.1366.685@0.23.1366.685" timestamp="1602437370028" />
-    <state width="1345" height="196" key="GridCell.Tab.0.left" timestamp="1602437370021">
-      <screen x="0" y="23" width="1366" height="685" />
+    <state width="1345" height="196" key="GridCell.Tab.0.left" timestamp="1603468253160">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1602414189469" />
+    <state width="1345" height="196" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1603468253160" />
     <state width="1345" height="196" key="GridCell.Tab.0.left/0.23.1366.685@0.23.1366.685" timestamp="1602437370021" />
-    <state width="1345" height="196" key="GridCell.Tab.0.right" timestamp="1602437370029">
-      <screen x="0" y="23" width="1366" height="685" />
+    <state width="1345" height="196" key="GridCell.Tab.0.right" timestamp="1603468253163">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1602414189471" />
+    <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603468253163" />
     <state width="1345" height="196" key="GridCell.Tab.0.right/0.23.1366.685@0.23.1366.685" timestamp="1602437370029" />
     <state x="192" y="23" key="SettingsEditor" timestamp="1603129545987">
       <screen x="0" y="0" width="1366" height="768" />
@@ -121,9 +127,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="283" y="120" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1603128139390" />
-    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1602417665248">
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1603454081404">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1602417665248" />
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1603454081404" />
   </component>
 </project>

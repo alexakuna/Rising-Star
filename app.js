@@ -4,7 +4,7 @@ const path = require('path');
 const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
-const aboutusRoute = require('./routes/aboutus');
+const aboutUsRoute = require('./routes/aboutus');
 const contactsRoute = require('./routes/contacts');
 const feedbacksRoute = require('./routes/feedbacks');
 const regulationsRoute = require('./routes/regulations');
@@ -27,7 +27,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
 app.get('*', (req, res, next) => {
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     ip === '159.224.186.64'
@@ -45,9 +44,19 @@ app.use(requestRoute);
 app.use(contactsRoute);
 app.use(feedbacksRoute);
 app.use(regulationsRoute);
-app.use(aboutusRoute);
+app.use(aboutUsRoute);
 app.use(timetableRoute);
 app.use(videoRoute);
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/dist'));
+    app.get('api/login', (req, res) => {
+        res.sendFile(
+            path.resolve(
+                __dirname, 'client', 'dist', 'index.html'
+            )
+        )
+    })
+}
 
 module.exports = app;
