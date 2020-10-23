@@ -50,7 +50,7 @@ app.use(videoRoute);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/dist'));
-    app.get('api/login', (req, res) => {
+    app.get('/api/login', (req, res) => {
         res.sendFile(
             path.resolve(
                 __dirname, 'client', 'dist', 'index.html'
