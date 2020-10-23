@@ -28,7 +28,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res, next) => {
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
-    ip === '159.224.186.64' || ip === '::1' ? app.locals.isVisible = true : app.locals.isVisible = false
+    ip === '159.224.186.64'
+    ||
+    ip === '::1'
+    || ip === '91.218.99.13'
+        ? app.locals.isVisible = true
+        : app.locals.isVisible = false
     next()
 })
 
