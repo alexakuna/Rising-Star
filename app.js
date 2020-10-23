@@ -40,7 +40,7 @@ app.get('*', (req, res, next) => {
 })
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/dist'))
-    router.get('/login', (req, res) => {
+    router.get('*', (req, res) => {
         if (process.env.NODE_ENV === 'production') {
             res.sendFile(
                 path.resolve(
