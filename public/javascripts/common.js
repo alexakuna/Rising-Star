@@ -7,13 +7,6 @@
 //     console.log(e)
 // }
 document.addEventListener('DOMContentLoaded', function() {
-    //const close = document.querySelector('#btn-close')
     const elem = document.querySelectorAll('.sidenav');
     M.Sidenav.init(elem)
-    // close.addEventListener('click', () => {
-    //     elem[0].close()
-    // } )
 });
-
-
-// console.log(document.querySelectorAll('[data-act="active"]'))
