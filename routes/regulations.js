@@ -3,6 +3,7 @@ const Home = require('../models/Home')
 const Pages = require('../models/Pages')
 const Regulations = require('../models/Regulations')
 
+
 const router = Router()
 
 router.get('/regulations',async (req, res) => {

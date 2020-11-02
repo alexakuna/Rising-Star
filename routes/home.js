@@ -2,6 +2,7 @@ const {Router} = require('express')
 const Home = require('../models/Home')
 const Pages = require('../models/Pages')
 
+
 const router = Router()
 
 router.get('/',async (req, res) => {

@@ -12,6 +12,12 @@ body {
   line-height: 46px !important;
   height: 46px !important;
 }
+::-webkit-scrollbar { /* chrome based */
+  width: 0;  /* ширина scrollbar'a */
+  background: transparent;  /* опционально */
+}
+
+
 html {
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,6 +26,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 main {
   flex: 1 0 auto;
