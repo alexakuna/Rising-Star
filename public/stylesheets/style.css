@@ -8,6 +8,10 @@ body {
 .m-right {
   margin-right: 60px;
 }
+.nav {
+  line-height: 46px !important;
+  height: 46px !important;
+}
 html {
   background-repeat: no-repeat;
   background-position: center center;

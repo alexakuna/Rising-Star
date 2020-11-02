@@ -4,95 +4,9 @@
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/css/app.4cd6f013.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/css/chunk-vendors.24ce4a6c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/img/icons/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/app.7f810156.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/app.7f810156.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0b8e8f.361c10e2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0b8e8f.361c10e2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0c0fe6.681be953.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0c0fe6.681be953.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0c7374.599954d6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0c7374.599954d6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0d3dce.a1683c15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0d3dce.a1683c15.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0d799a.f9f11569.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d0d799a.f9f11569.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d20f8d6.c9e7f704.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d20f8d6.c9e7f704.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d21a3d2.9ebdbb55.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d21a3d2.9ebdbb55.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d21b8a8.c5d9bc85.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d21b8a8.c5d9bc85.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d229481.0764a775.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-2d229481.0764a775.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-vendors.a1914a01.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/js/chunk-vendors.a1914a01.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/precache-manifest.57bd59a11efc054c112d10351f2de132.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/img/icons/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/layouts/emptyLayout.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/layouts/mainLayout.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/registerServiceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/app/navbar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/app/sidebar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/categories.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/detail-history.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/history.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/planning.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/profile.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/record.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/register.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +84,14 @@
       <workItem from="1603034610573" duration="15337000" />
       <workItem from="1603139395578" duration="7534000" />
       <workItem from="1603456075172" duration="5585000" />
-      <workItem from="1603482869899" duration="4352000" />
+      <workItem from="1603482869899" duration="4647000" />
+      <workItem from="1603558013072" duration="2089000" />
+      <workItem from="1603628289251" duration="2762000" />
+      <workItem from="1603654748535" duration="774000" />
+      <workItem from="1603717021393" duration="2701000" />
+      <workItem from="1603829569015" duration="491000" />
+      <workItem from="1604244181211" duration="515000" />
+      <workItem from="1604254897313" duration="1636000" />
     </task>
     <servers />
   </component>
@@ -206,6 +127,10 @@
     </state>
     <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603480911775" />
     <state width="1345" height="196" key="GridCell.Tab.0.right/0.23.1366.685@0.23.1366.685" timestamp="1602437370029" />
+    <state x="271" y="134" key="IDE.errors.dialog" timestamp="1603717056262">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="271" y="134" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1603717056262" />
     <state x="192" y="23" key="SettingsEditor" timestamp="1603129545987">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
