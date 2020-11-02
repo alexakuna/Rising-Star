@@ -1,0 +1,14 @@
+<div class="row">
+    <% for(let i = 0; regulations.length > i; i++) { %>
+    <div class="col s12 m6">
+        <div class="card-panel white">
+            <img width="100%" src="<%=regulations[i].img%>" alt="Rising star">
+            <h4><%=regulations[i].title%></h4>
+            <div class="btn-wrapper" style="display: flex; justify-content: space-between; align-content: center">
+                <a href="<%=regulations[i].url%>" style="background-color: #4a148c" class="waves-effect waves-light btn">Читать</a>
+                <a href="#" style="background-color: #4a148c" class="waves-effect waves-light btn">Скачать</a>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

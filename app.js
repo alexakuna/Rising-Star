@@ -10,6 +10,7 @@ const feedbacksRoute = require('./routes/feedbacks');
 const regulationsRoute = require('./routes/regulations');
 const timetableRoute = require('./routes/timetable');
 const videoRoute = require('./routes/video');
+const regulationsVocal = require('./routes/regulations/vocal')
 const app = express();
 
 const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
@@ -27,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.get('*', (req, res, next) => {
+app.get('*', async (req, res, next) => {
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     ip === '159.224.186.64'
     ||
@@ -47,5 +48,8 @@ app.use(regulationsRoute);
 app.use(aboutUsRoute);
 app.use(timetableRoute);
 app.use(videoRoute);
+
+// Роутеры для положений
+app.use(regulationsVocal);
 
 module.exports = app;

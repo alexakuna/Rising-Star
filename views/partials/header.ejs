@@ -5,9 +5,9 @@
             <a href="#!" class="brand-logo r-logo"><%= title %></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down m-right">
-                <% for(let i = 0; navLinks.length > i; i++) { %>
+                <% for(let i = 0; pages.length > i; i++) { %>
                     <li class="">
-                        <a href="/<%=navLinks[i].link%>"><%= navLinks[i].name %></a>
+                        <a href="<%=pages[i].url%>"><%= pages[i].title %></a>
                     </li>
                 <% } %>
             </ul>
@@ -20,9 +20,9 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <% for(let i = 0; navLinks.length > i; i++) { %>
+        <% for(let i = 0; pages.length > i; i++) { %>
         <li class="">
-            <a href="/<%=navLinks[i].link%>"><%= navLinks[i].name %></a>
+            <a href="<%=pages[i].url%>"><%= pages[i].title %></a>
         </li>
         <% } %>
         <li id="btn-close" class="sidenav-close"><a href="#"><span class="material-icons">close</span></a></li>
