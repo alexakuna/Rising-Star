@@ -27,8 +27,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//app.locals.isActive = true
 
 app.get('*', async (req, res, next) => {
+    app.locals.activeUrl = req.params[0]
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     ip === '159.224.186.64'
     ||
@@ -36,7 +38,6 @@ app.get('*', async (req, res, next) => {
     || ip === '91.218.99.13'
         ? app.locals.isVisible = true
         : app.locals.isVisible = false
-
     next()
 })
 

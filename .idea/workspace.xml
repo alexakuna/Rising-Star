@@ -5,9 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/feedbacks.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/feedbacks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/regulation.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/regulation.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,8 @@
       <workItem from="1604244181211" duration="515000" />
       <workItem from="1604254897313" duration="1636000" />
       <workItem from="1604317349503" duration="20465000" />
-      <workItem from="1604352317696" duration="3203000" />
+      <workItem from="1604352317696" duration="3644000" />
+      <workItem from="1604393688434" duration="5394000" />
     </task>
     <servers />
   </component>
