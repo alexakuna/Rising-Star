@@ -35,7 +35,10 @@ app.get('*', async (req, res, next) => {
     ip === '159.224.186.64'
     ||
     ip === '::1'
-    || ip === '91.218.99.13'
+    ||
+    ip === '91.218.99.13'
+    ||
+    ip === '128.124.196.231'
         ? app.locals.isVisible = true
         : app.locals.isVisible = false
     next()
