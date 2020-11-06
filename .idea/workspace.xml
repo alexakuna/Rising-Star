@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/art.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/art.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/circus.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/circus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/dance.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/dance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/instrumental.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/instrumental.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/teatr.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/teatr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/art.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/art.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/circus.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/circus.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/dance.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/dance.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/instrumental.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/instrumental.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/teatr.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/teatr.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +106,8 @@
       <workItem from="1604352317696" duration="3644000" />
       <workItem from="1604393688434" duration="7326000" />
       <workItem from="1604519373737" duration="778000" />
-      <workItem from="1604625777274" duration="42000" />
+      <workItem from="1604625777274" duration="297000" />
+      <workItem from="1604683265148" duration="8496000" />
     </task>
     <servers />
   </component>
@@ -101,33 +115,33 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="422" y="184" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602791682125">
+    <state x="422" y="184" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604692468420">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="422" y="184" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1602791682125" />
+    <state x="422" y="184" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1604692468420" />
     <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603127053714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1603127053714" />
-    <state width="1345" height="196" key="GridCell.Tab.0.bottom" timestamp="1604353583824">
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom" timestamp="1604692272835">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604353583824" />
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604692272835" />
     <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.23.1366.685@0.23.1366.685" timestamp="1602437370030" />
-    <state width="1345" height="196" key="GridCell.Tab.0.center" timestamp="1604353583822">
+    <state width="1345" height="196" key="GridCell.Tab.0.center" timestamp="1604692272832">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604353583822" />
+    <state width="1345" height="196" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604692272832" />
     <state width="1345" height="196" key="GridCell.Tab.0.center/0.23.1366.685@0.23.1366.685" timestamp="1602437370028" />
-    <state width="1345" height="196" key="GridCell.Tab.0.left" timestamp="1604353583821">
+    <state width="1345" height="196" key="GridCell.Tab.0.left" timestamp="1604692272831">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604353583821" />
+    <state width="1345" height="196" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604692272831" />
     <state width="1345" height="196" key="GridCell.Tab.0.left/0.23.1366.685@0.23.1366.685" timestamp="1602437370021" />
-    <state width="1345" height="196" key="GridCell.Tab.0.right" timestamp="1604353583823">
+    <state width="1345" height="196" key="GridCell.Tab.0.right" timestamp="1604692272834">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604353583823" />
+    <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604692272834" />
     <state width="1345" height="196" key="GridCell.Tab.0.right/0.23.1366.685@0.23.1366.685" timestamp="1602437370029" />
     <state x="271" y="134" key="IDE.errors.dialog" timestamp="1603717056262">
       <screen x="0" y="0" width="1366" height="768" />

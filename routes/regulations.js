@@ -13,7 +13,7 @@ router.get('/regulations',async (req, res) => {
     const pag = pages[0]
     home[0].pages = pag.pages
     home[0].regulations = regulations1[0].regulations
-    //console.log(regulations1[0].regulations)
+
     res.render('regulations', home[0])
 })
 

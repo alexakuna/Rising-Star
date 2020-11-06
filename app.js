@@ -11,6 +11,11 @@ const regulationsRoute = require('./routes/regulations');
 const timetableRoute = require('./routes/timetable');
 const videoRoute = require('./routes/video');
 const regulationsVocal = require('./routes/regulations/vocal')
+const regulationsInstrumental = require('./routes/regulations/instrumental')
+const regulationsArt = require('./routes/regulations/art')
+const regulationsCircus = require('./routes/regulations/circus')
+const regulationsTeatr = require('./routes/regulations/teatr')
+const regulationsDance = require('./routes/regulations/dance')
 const app = express();
 
 const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
@@ -54,7 +59,13 @@ app.use(aboutUsRoute);
 app.use(timetableRoute);
 app.use(videoRoute);
 
+
 // Роутеры для положений
 app.use(regulationsVocal);
+app.use(regulationsArt);
+app.use(regulationsInstrumental);
+app.use(regulationsCircus);
+app.use(regulationsTeatr);
+app.use(regulationsDance);
 
 module.exports = app;
