@@ -95,7 +95,7 @@ app.use('/pdfFromHTMLString', function(req, res){
         res.pdfFromHTML({
             filename: 'generated.pdf',
             htmlContent: resp.data,
-            options: {"base": "http://localhost:4200/stylesheets/materialize.min.css"}
+            options: {"base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css"}
         });
     })
 });
