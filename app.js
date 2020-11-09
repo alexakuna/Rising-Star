@@ -79,7 +79,7 @@ app.use(regulationsDance)
 app.use('/pdfFromHTMLString', function(req, res){
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`http://localhost:4200${url}`)
+    axios.get(`https://dashboard.heroku.com${url}`)
         .then(resp => {
 
             const str = resp.data.indexOf('main')
@@ -90,9 +90,9 @@ app.use('/pdfFromHTMLString', function(req, res){
         res.pdfFromHTML({
             filename: `${url.slice(0, 0)}.pdf`,
             htmlContent: result,
-            // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
+            // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://dashboard.heroku.com
             options: {
-                "base": "http://localhost:4200/stylesheets/materialize.min.css",
+                "base": "https://dashboard.heroku.com/stylesheets/materialize.min.css",
                 "border": {
                     "top": "1in",
                     "right": "1in",
