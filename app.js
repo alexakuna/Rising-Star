@@ -45,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('*', async (req, res, next) => {
     app.locals.activeUrl = req.params[0]
+    //console.log(app.locals.activeUrl)
     if(req.params[0] !== '/pdfFromHTMLString') {
         localStorage.setItem('url', req.params[0])
     }
