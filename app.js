@@ -90,7 +90,7 @@ app.use('/pdfFromHTML', function(req, res){
 });
 
 app.use('/pdfFromHTMLString', function(req, res){
-    axios.get('http://localhost:4200' + localStorage.getItem('url'))
+    axios.get('https://rsfrontend.herokuapp.com' + localStorage.getItem('url'))
         .then(resp => {
         res.pdfFromHTML({
             filename: 'generated.pdf',
