@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
-const loginPage = require('./routes/login')
+//const loginPage = require('./routes/login')
 const homeRouter = require('./routes/home');
 const requestRoute = require('./routes/request');
 const aboutUsRoute = require('./routes/aboutus');
@@ -19,8 +19,16 @@ const regulationsDance = require('./routes/regulations/dance')
 const app = express();
 const pdf = require('express-pdf')
 const axios = require('axios')
-const jsdom = require("jsdom")
-const { JSDOM } = jsdom;
+const cors = require('cors')
+app.use(pdf)
+//const jsdom = require("jsdom")
+//const { JSDOM } = jsdom;
+
+
+if (typeof localStorage === "undefined" || localStorage === null) {
+    let LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage('./scratch');
+}
 
 
 const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
@@ -33,6 +41,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true})
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -52,7 +61,6 @@ app.get('*', async (req, res, next) => {
     next()
 })
 
-app.use(loginPage)
 app.use(homeRouter);
 app.use(requestRoute);
 app.use(contactsRoute);
@@ -71,17 +79,7 @@ app.use(regulationsCircus);
 app.use(regulationsTeatr);
 app.use(regulationsDance);
 
-// const file = require('./exemple')
-// app.post('/create-pdf', (req, res) => {
-//
-//     pdf.create('', {}).toFile('regulation.pdf', (err) => {
-//         if(err) {
-//             res.send(Promise.reject());
-//         }
-//         res.send(Promise.resolve());
-//     })
-// })
-app.use(pdf)
+
 
 app.use('/pdfFromHTML', function(req, res){
     res.pdfFromHTML({
@@ -92,13 +90,12 @@ app.use('/pdfFromHTML', function(req, res){
 });
 
 app.use('/pdfFromHTMLString', function(req, res){
-    axios.get('http://localhost:4200/vocal').then(resp => {
-        //const dom = new JSDOM(resp.data);
-        //console.log(dom.window.document.querySelector("p").textContent)
+    axios.get('http://localhost:4200' + localStorage.getItem('url'))
+        .then(resp => {
         res.pdfFromHTML({
             filename: 'generated.pdf',
             htmlContent: resp.data,
-            // options: {...}
+            options: {"base": "http://localhost:4200/stylesheets/materialize.min.css"}
         });
     })
 });
