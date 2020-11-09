@@ -45,6 +45,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('*', async (req, res, next) => {
     app.locals.activeUrl = req.params[0]
+    if(req.params[0] !== '/pdfFromHTMLString') {
+        localStorage.setItem('url', req.params[0])
+    }
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     ip === '159.224.186.64'
     ||
@@ -81,12 +84,9 @@ app.use('/pdfFromHTMLString', function(req, res){
     const url = localStorage.getItem('url')
     axios.get(`https://rsfrontend.herokuapp.com${url}`)
         .then(resp => {
-
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
-
             const result = resp.data.substring(str - 1, str2 + 5)
-            console.log(result)
         res.pdfFromHTML({
             filename: `${url.slice(0, 0)}.pdf`,
             htmlContent: result,
