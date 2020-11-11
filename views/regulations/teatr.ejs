@@ -9,7 +9,7 @@
     <link rel='stylesheet' href='/stylesheets/materialize.min.css'/>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel='stylesheet' href='/stylesheets/regulations.css'/>
-    <title>Театр</title>
+    <title><%=category%></title>
 </head>
 <body>
 <header>
@@ -27,118 +27,92 @@
 <main class="container img-wrapper-background height-main">
     <div class="row">
         <div class="col s12">
-            <h1 style="color: #9c27b0">Rising Star</h1>
-            <h4><%=title%></h4>
-            <p style="font-size: x-large; color: #212121">Міжнародний вокальний фестиваль-конкурс! | <span class="date-text ">2020-2022</span></p>
-            <p>Організатори: <span>Іщенко Алевтіна</span> та <span>Овчиннікова Надія</span></p>
+            <h1 style="color: #9c27b0"><%=title%></h1>
+            <p style="font-size: x-large; color: #212121"><%=description.description%> | <span class="date-text "><%=description.date%></span></p>
+            <h4><%=category%></h4>
+            <p><%=organizers%></p>
             <hr>
-            <p>У конкурсі беруть участь колективи, окремі виконавці віком від 3 до 25 років та більше, без обмежень в різних вокальних жанрах зі всього світу!</p>
+            <p><%=age%></p>
             <hr>
-            <h5>ВІКОВІ КАТЕГОРІЇ:</h5>
+            <h5><%=ageCategory.title%></h5>
             <ul>
-                <li>3-6 років</li>
-                <li>7-9 років</li>
-                <li>10-12 років</li>
-                <li>13-16 років</li>
-                <li>17-25 років</li>
-                <li>26 років та більше</li>
-                <li>змішана вікова категорія</li>
+                <% for(let i = 0; ageCategory.description.length > i; i++) { %>
+                <li><%=ageCategory.description[i]%></li>
+                <% } %>
             </ul>
-            <h5>НОМІНАЦІЇ:</h5>
+            <h5><%=nominations.title%></h5>
+            <h6><%=nominations.name%></h6>
             <ul>
-                <li>Театральні студії</li>
-                <li>Театральні колективи</li>
-                <li>Мюзікли</li>
-                <li>Театри в танці</li>
-                <li>Лялькові театри</li>
-                <li>Театри мод</li>
-                <li>Читці</li>
-                <li>Виконавці індивідуальних номерів</li>
-                <li>Гуморина</li>
+                <% for(let i = 0; nominations.description.length > i; i++) { %>
+                <li><%=nominations.description[i]%></li>
+                <% } %>
             </ul>
-            <h5>КРИТЕРІЇ ОЦІНЮВАННЯ:</h5>
+            <h5><%=criteria.title%></h5>
             <ul>
-                <li>сценарій</li>
-                <li>сценічна композиція</li>
-                <li>режиссура</li>
-                <li>музичне оформлення</li>
-                <li>художнє оформлення</li>
-                <li>костюм</li>
-                <li>акторська майстерність</li>
+                <% for(let i = 0; criteria.description.length > i; i++) { %>
+                <li><%=criteria.description[i]%></li>
+                <% } %>
             </ul>
-            <h5>УМОВИ ДО ВИСТУПУ:</h5>
-            <p>Театральні колективи можуть надати одноактні вистави, уривки, композиції.</p>
+            <h5><%=terms.title%></h5>
             <ul>
-                <li>- Для груп (театри і супровід) не менше 30 осіб - тривалість до 1 години</li>
-                <li>- Для груп (театри і супровід) не менше 20 осіб - тривалість до 45 хвилин</li>
-                <li>- Для груп (театри і супровід) не менше 10 осіб - тривалість до 30 хвилин</li>
-                <li>- Вистави малих форм (до 10 осіб) тривалістю не більше 20 хв</li>
-                <li>Читці та виконавці індивідуальних номерів надають поетичні або прозаїчні твори тривалістю не більше 5 хвилин.</li>
-                <li>Відео може бути знято як на мобільний телефон, так і на професійну камеру.</li>
+                <% for(let i = 0; terms.description.length > i; i++) { %>
+                <li><%=terms.description[i]%></li>
+                <% } %>
             </ul>
-            <h5>НАГОРОДЖЕННЯ</h5>
+            <h5><%=awards.title%></h5>
             <ul>
-                <li>Виступи конкурсантів оцінюються по 10-бальній системі.</li>
-                <li>А також допускається дублювання призових місць.</li>
-                <li>1 місце (10-9 баллів)</li>
-                <li>2 місце (8-7 баллів)</li>
-                <li>3 місце (5-4 баллів)</li>
-                <li>учасник 3; 2; 1;</li>
+                <% for(let i = 0; awards.places.length > i; i++) { %>
+                <li><%=awards.places[i]%></li>
+                <% } %>
             </ul>
             <ul>
-                <li>Гран-Прі (великий кубок та диплом)</li>
-                <li>Диплом лауреата 1 ступеня; ( кубок та диплом)</li>
-                <li>Диплом лауреата 2 ступеня; (медаль та диплом)</li>
-                <li>Диплом лауреата 3 ступеня. (Диплом)</li>
-                <li>Учасник (диплом)</li>
+                <% for(let i = 0; awards.diplomas.length > i; i++) { %>
+                <li><%=awards.diplomas[i]%></li>
+                <% } %>
             </ul>
-            <h5>ФІНАНСОВІ УМОВИ:</h5>
-            <p>Фестиваль не являється комерційним заходом та здійснюється за рахунок благодійних внесків за участь .</p>
-            <p>Благодiйний внесок:</p>
+            <h5><%=finance.title%></h5>
+            <p><%=finance.desc1%></p>
+            <p><%=finance.desc2%></p>
             <ul>
-                <li>соло-250 грн./1 чол.</li>
-                <li>хори,ансамблі,дуєт,тріо(до10осіб)- 200 грн. / 1 чол.</li>
-                <li>хори,ансамблі(понад10осіб)-100 грн. / 1 чол.</li>
+                <% for(let i = 0; finance.fields.length > i; i++) { %>
+                <li><%=finance.fields[i]%></li>
+                <% } %>
             </ul>
-            <h5>Увага!</h5>
-            <p><b>Виконання додаткового номеру за окрему плату!</b></p>
-            <h5>Пiльги:</h5>
-            <p>Дiтям з багатодiтної родини надається знижка 50%.</p>
-            <p>На безкоштовну участь в конкурсі мають право діти:</p>
+            <h5><%=note.title%></h5>
+            <p><b><%=note.description%></b></p>
+            <h5><%=privileges.title%></h5>
+            <p><%=privileges.desc1%></p>
+            <p><%=privileges.desc2%></p>
             <ul>
-                <li>Сироти - круглі сироти (без батька і матері)</li>
-                <li>Діти інваліди 1-ї групи</li>
+                <% for(let i = 0; privileges.fields.length > i; i++) { %>
+                <li><%=privileges.fields[i]%></li>
+                <% } %>
             </ul>
-            <p><u>(Для підтвердження статусу
-                    багатодiтноi родини інваліда, або сироти необхідно надати відповідні документи).</u></p>
-            <h5>ЗАЯВКА НА УЧАСТЬ У ФЕСТИВАЛІ-КОНКУРСІ:</h5>
+            <h5><%=request.title%></h5>
             <ul>
-                <li>Країна</li>
-                <li>Місто</li>
-                <li>Керівник або студія (ім’я або назва)</li>
-                <li>Прізвище, ім’я, по батькові учасника (англійською мовою)</li>
-                <li>Номінація</li>
-                <li>Вікова категорія</li>
-                <li>Назва номеру</li>
-                <li>Телефон для контакту</li>
-                <li>Електронна адреса</li>
-                <li>Номер пошти, ПІП, телефон отримувача</li>
-                <li>ФОТО УЧАСНИКА для каналу - ОБОВ'ЯЗКОВО!</li>
+                <% for(let i = 0; request.fields.length > i; i++) { %>
+                <li><%=request.fields[i]%></li>
+                <% } %>
             </ul>
-            <h5>Контактні телефони:</h5>
+            <h5><%=contacts.title%></h5>
             <ul>
-                <li>+380 (97) 954 18 34</li>
-                <li>+380 (99) 222 77 74</li>
-                <li>(vider, telegram, Whatsapp)</li>
-                <li>email - risingstarfest@gmail.com</li>
+                <% for(let i = 0; contacts.fields.length > i; i++) { %>
+                <li><%=contacts.fields[i]%></li>
+                <% } %>
             </ul>
         </div>
     </div>
 </main>
-<div class="button">
-    <a href="/pdfFromHTMLString" style="background-color: #4a148c" class="waves-effect waves-light btn">Скачать положение</a>
-</div>
+
+<section class="button">
+    <a href="/pdfFromHTMLString" style="background-color: #4a148c" class="waves-effect waves-light btn"><%=button%></a>
+</section>
+
 <%- include('../partials/footer.ejs') %>
 <script src="/javascripts/materialize.js" ></script>
-<script src="/javascripts/common.js"></script></body>
+<script src="/javascripts/common.js"></script>
+</body>
 </html>
+
+
+

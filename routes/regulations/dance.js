@@ -1,9 +1,15 @@
 const {Router} = require('express')
 const router = Router()
+const Dance = require('../../models/Dance')
 
-router.get('/dance', (req, res) => {
+router.get('/dance', async (req, res) => {
 
-    res.render('regulations/dance', {title: 'Танцы'})
+    try {
+        const content = await Dance.find()
+        res.render('regulations/dance', content[0])
+    } catch (e) {
+        console.log(e)
+    }
 })
 
 module.exports = router;

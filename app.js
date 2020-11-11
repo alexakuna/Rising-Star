@@ -94,9 +94,9 @@ app.use('/pdfFromHTMLString', function(req, res){
             options: {
                 "base": "http://localhost:4200/stylesheets/materialize.min.css",
                 "border": {
-                    "top": "1in",
+                    "top": "0.5in",
                     "right": "1in",
-                    "bottom": "1in",
+                    "bottom": "0.5in",
                     "left": "1in"
                 }
             }

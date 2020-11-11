@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/art.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/art.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/circus.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/circus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/dance.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/dance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/instrumental.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/instrumental.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations/teatr.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/teatr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/regulations/vocal.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations/vocal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scratch/url" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/url" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/art.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/art.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/circus.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/circus.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/dance.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/dance.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/instrumental.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/instrumental.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regulations/teatr.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/teatr.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/regulations/vocal.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/vocal.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +111,7 @@
       <workItem from="1604625777274" duration="297000" />
       <workItem from="1604683265148" duration="8979000" />
       <workItem from="1604765103090" duration="13782000" />
-      <workItem from="1604917137639" duration="32419000" />
+      <workItem from="1604917137639" duration="42511000" />
     </task>
     <servers />
   </component>

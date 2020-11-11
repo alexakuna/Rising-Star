@@ -1,9 +1,15 @@
 const {Router} = require('express')
 const router = Router()
+const Instrumental = require('../../models/Instrumental')
 
-router.get('/instrumental', (req, res) => {
+router.get('/instrumental', async (req, res) => {
 
-    res.render('regulations/instrumental', {title: 'Инструментал'})
+    try {
+        const content = await Instrumental.find()
+        res.render('regulations/instrumental', content[0])
+    } catch (e) {
+        console.log(e)
+    }
 })
 
 module.exports = router;
