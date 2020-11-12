@@ -23,8 +23,8 @@ const regulationsTheatre = require('./routes/regulations/teatr')
 const regulationsDance = require('./routes/regulations/dance')
 
 if (typeof localStorage === "undefined" || localStorage === null) {
-    let LocalStorage = require('node-localstorage').LocalStorage;
-    localStorage = new LocalStorage('./scratch');
+    const LocalStorage = require('node-localstorage').LocalStorage
+    localStorage = new LocalStorage('./scratch')
 }
 
 const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
@@ -82,7 +82,7 @@ app.use(regulationsDance)
 app.use('/pdfFromHTMLString', function(req, res){
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`https://rsfrontend.herokuapp.com${url}`)
+    axios.get(`http://localhost:4200${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
@@ -92,7 +92,7 @@ app.use('/pdfFromHTMLString', function(req, res){
             htmlContent: result,
             // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
             options: {
-                "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
+                "base": "http://localhost:4200/stylesheets/materialize.min.css",
                 "border": {
                     "top": "0.5in",
                     "right": "1in",
@@ -104,8 +104,10 @@ app.use('/pdfFromHTMLString', function(req, res){
     }).catch(e => console.warn(e))
 })
 
-// app.post('/submit', async function (req, res) {
-//     res.json({work: true})
-// })
+app.post('/submit', async function (req, res) {
+    console.log(req.body)
+
+    res.json({work: true})
+})
 
 module.exports = app
