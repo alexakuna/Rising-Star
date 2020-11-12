@@ -88,7 +88,7 @@ app.use('/pdfFromHTMLString', function(req, res){
             const str2 = resp.data.lastIndexOf('main')
             const result = resp.data.substring(str - 1, str2 + 5)
         res.pdfFromHTML({
-            filename: `${url.slice(0, 0)}.pdf`,
+            filename: `${url.replace('/', '')}.pdf`,
             htmlContent: result,
             // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
             options: {
@@ -103,5 +103,9 @@ app.use('/pdfFromHTMLString', function(req, res){
         })
     }).catch(e => console.warn(e))
 })
+
+// app.post('/submit', async function (req, res) {
+//     res.json({work: true})
+// })
 
 module.exports = app

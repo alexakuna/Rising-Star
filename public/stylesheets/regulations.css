@@ -7,5 +7,5 @@ main ul > li {
     padding-bottom: 40px;
 }
 .btn-color {
-    background-color: #4a148c;
+    background-color: #4a148c !important;
 }

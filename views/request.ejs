@@ -5,6 +5,80 @@
 <%- include('partials/header.ejs') %>
 <main class="container img-wrapper-background height-main">
 <h1>Заявка</h1>
+
+    <div class="row">
+        <form class="col s12" action="/submit" method="post">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="country" type="text" class="validate">
+                    <label for="country">Країна</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="city" type="text" class="validate">
+                    <label for="city">Місто</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="name_organisation" type="text" class="validate">
+                    <label for="name_organisation">Керівник або студія (ім’я або назва)</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="pip" type="text" class="validate">
+                    <label for="pip">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="nomination" type="text" class="validate">
+                    <label for="nomination">Номінація</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="age" type="text" class="validate">
+                    <label for="age">Вікова категорія</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input id="name_performance" type="text" class="validate">
+                    <label for="name_performance">Назва номеру</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="tel" type="text" class="validate">
+                    <label for="tel">Телефон для контакту</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Електронна адреса</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="pip_getter" type="text" class="validate">
+                    <label for="pip_getter">Номер пошти, ПІП, телефон отримувача</label>
+                </div>
+            </div>
+            <div class="file-field input-field">
+                <div style="width: 100%;background-color: #4a148c !important;" class="scale-transition btn waves-effect waves-light">
+                    <span>ФОТО УЧАСНИКА для каналу - ОБОВ'ЯЗКОВО!</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input style="visibility: hidden" class="file-path validate" type="text">
+                </div>
+            </div>
+<!--            <div class="row">-->
+<!--                <div class="col s12">-->
+<!--                    This is an inline input field:-->
+<!--                    <div class="input-field inline">-->
+<!--                        <input id="email_inline" type="email" class="validate">-->
+<!--                        <label for="email_inline">Email</label>-->
+<!--                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 40px;">
+                <button style="background-color: #4a148c !important;" class="btn waves-effect waves-light" type="submit" name="action">Отправить
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+
 </main>
 <%- include('partials/footer.ejs') %>
 

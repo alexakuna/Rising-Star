@@ -33,7 +33,7 @@ main {
   flex: 1 0 auto;
 }
 h1 {
-  color: #3e2723;
+  color: #333333;
 }
 #btn-close {
   position: absolute;
@@ -63,9 +63,36 @@ h1 {
 .btn-wrapper {
   margin-top: 20px;
 }
+@media only screen and (max-width:768px) {
+  .cls-m {
+    margin-left: 0 !important;
+  }
+  .cls-m-m {
+    margin-top: 10px !important;
+  }
+}
+@media only screen and (max-width:425px) {
+  .cls-m-s {
+    margin-top: 6px !important;
+  }
+}
 
 @media only screen and (max-width:320px) {
   .sidenav {
     width: 250px !important;
   }
+}
+.input-field input[type=text].valid,
+.input-field input[type=email].valid {
+  border-bottom: 1px solid #4a148c !important;
+  box-shadow: 0 1px 0 0 #4a148c !important;
+}
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label {
+  color: #4a148c !important;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #4a148c !important;
+  box-shadow: 0 1px 0 0 #4a148c !important;
 }
