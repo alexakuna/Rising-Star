@@ -5,59 +5,58 @@
 <%- include('partials/header.ejs') %>
 <main class="container img-wrapper-background height-main">
 <h1>Заявка</h1>
-
     <div class="row">
-        <form class="col s12" action="/submit" method="post">
+        <form class="col s12 request-form" action="/submit" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="country" name="country" type="text" class="validate">
-                    <label for="country">Країна</label>
+                    <input required maxlength="100" id="country" name="country" type="text" class="validate">
+                    <label for="country" class="active">Країна</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="city" type="text" name="city" class="validate">
-                    <label for="city">Місто</label>
+                    <input required id="city" type="text" name="city" class="validate">
+                    <label for="city" class="active">Місто</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="name_organisation" type="text" name="name_organisation" class="validate">
-                    <label for="name_organisation">Керівник або студія (ім’я або назва)</label>
+                    <input required id="name_organisation" type="text" name="name_organisation" class="validate">
+                    <label for="name_organisation" class="active">Керівник або студія (ім’я або назва)</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="pip" type="text" name="pip" class="validate">
-                    <label for="pip">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
+                    <input required id="pip" type="text" name="pip" class="validate">
+                    <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="nomination" type="text" name="nomination" class="validate">
-                    <label for="nomination">Номінація</label>
+                    <input required id="nomination" type="text" name="nomination" class="validate">
+                    <label for="nomination" class="active">Номінація</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="age" type="text" name="age" class="validate">
-                    <label for="age">Вікова категорія</label>
+                    <input required id="age" type="text" name="age" class="validate">
+                    <label for="age" class="active">Вікова категорія</label>
                 </div>
 
                 <div class="input-field col s12">
-                    <input id="name_performance" type="text" name="name_performance" class="validate">
-                    <label for="name_performance">Назва номеру</label>
+                    <input required id="name_performance" type="text" name="name_performance" class="validate">
+                    <label for="name_performance" class="active">Назва номеру</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="tel" type="text" name="tel" class="validate">
-                    <label for="tel">Телефон для контакту</label>
+                    <input required id="tel" type="text" name="tel" class="validate">
+                    <label for="tel" class="active">Телефон для контакту</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="email" type="email" name="email" class="validate">
-                    <label for="email">Електронна адреса</label>
+                    <input required id="email" type="email" name="email" class="validate">
+                    <label for="email" class="active">Електронна адреса</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="pip_getter" type="text" name="pip_getter" class="validate">
-                    <label for="pip_getter">Номер пошти, ПІП, телефон отримувача</label>
+                    <input required id="pip_getter" type="text" name="pip_getter" class="validate">
+                    <label for="pip_getter" class="active">Номер пошти, ПІП, телефон отримувача</label>
                 </div>
             </div>
             <div class="file-field input-field">
-                <div style="width: 100%;background-color: #4a148c !important;" class="scale-transition btn waves-effect waves-light">
+                <div style="background-color: #4a148c !important;" class="scale-transition btn waves-effect waves-light">
                     <span>Фото учасника (для каналу)</span>
-                    <input type="file" name="image">
+                    <input required type="file" name="image" class="validate">
                 </div>
                 <div class="file-path-wrapper">
-                    <input style="visibility: hidden" class="file-path validate" type="text">
+                    <input required class="file-path validate" type="text" disabled>
                 </div>
             </div>
 <!--            <div class="row">-->
@@ -84,5 +83,6 @@
 
 <script src="/javascripts/materialize.js" ></script>
 <script src="/javascripts/common.js"></script>
+
 </body>
 </html>

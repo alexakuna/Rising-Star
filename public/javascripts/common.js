@@ -6,8 +6,17 @@
 // document.onmousemove = (e) => {
 //     console.log(e)
 // }
-document.addEventListener('DOMContentLoaded', function() {
-    const elem = document.querySelectorAll('.sidenav');
+document.addEventListener('DOMContentLoaded' , function() {
+    const elem = document.querySelectorAll('.sidenav')
     M.Sidenav.init(elem)
+    const form = document.querySelector('.request-form')
+    if(form) {
+        form.querySelectorAll('label')
+            .forEach(function (i) {
+
+                if (i.className !== 'active' && i.value !== '') i.className = 'active'
+            })
+    }
 })
+
 

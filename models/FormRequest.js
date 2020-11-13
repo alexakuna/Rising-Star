@@ -1,7 +1,6 @@
 const { Schema, model } = require('mongoose')
 
 const schema = new Schema({
-    _id: mongoose.Schema.Types.ObjectId,
     country: {
         type: String,
         required: [true, 'Нужно указать страну']
@@ -32,14 +31,16 @@ const schema = new Schema({
     },
     email: {
         type: String,
-        required: [true, 'Нужно указать email']
+        required: [true, 'Нужно указать email'],
+        unique: true
     },
     pip_getter: {
         type: String,
         required: [true, 'Нужно указать Номер пошти, ПІП, телефон отримувача']
     },
     image: {
-        type: Buffer,
+        type: String,
+        default: '',
         required: [true, 'Фотография участника обязательна']
     },
     created: {

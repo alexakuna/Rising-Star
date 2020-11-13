@@ -1,5 +1,4 @@
 const express = require('express')
-const app = express()
 
 const mongoose = require('mongoose')
 const path = require('path')
@@ -21,6 +20,9 @@ const regulationsArt = require('./routes/regulations/art')
 const regulationsCircus = require('./routes/regulations/circus')
 const regulationsTheatre = require('./routes/regulations/teatr')
 const regulationsDance = require('./routes/regulations/dance')
+const member = require('./routes/member')
+
+const app = express()
 
 if (typeof localStorage === "undefined" || localStorage === null) {
     const LocalStorage = require('node-localstorage').LocalStorage
@@ -29,7 +31,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 
 const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => console.log('MDB connected'))
     .catch(err => console.log(err))
 
@@ -79,10 +81,12 @@ app.use(regulationsCircus)
 app.use(regulationsTheatre)
 app.use(regulationsDance)
 
+app.use('/submit', member)
+
 app.use('/pdfFromHTMLString', function(req, res){
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`http://localhost:4200${url}`)
+    axios.get(`https://rsfrontend.herokuapp.com${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
@@ -92,7 +96,7 @@ app.use('/pdfFromHTMLString', function(req, res){
             htmlContent: result,
             // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
             options: {
-                "base": "http://localhost:4200/stylesheets/materialize.min.css",
+                "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
                 "border": {
                     "top": "0.5in",
                     "right": "1in",
@@ -102,12 +106,6 @@ app.use('/pdfFromHTMLString', function(req, res){
             }
         })
     }).catch(e => console.warn(e))
-})
-
-app.post('/submit', async function (req, res) {
-    console.log(req.body)
-
-    res.json({work: true})
 })
 
 module.exports = app
