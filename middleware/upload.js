@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
     destination(req, file, cb){
         //console.log(file)
         const catalog = file.fieldname === 'image' ? 'photos' : 'video'
-        cb(null, `public/images/${catalog}`)
+        cb(null, `images/${catalog}`)
     },
     filename(req, file, cb) {
         const date = moment().format('DDMMYYYY-MMmmss_SSS');
