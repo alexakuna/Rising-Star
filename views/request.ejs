@@ -57,14 +57,41 @@
                         class="scale-transition btn waves-effect waves-light"
                     >
                         <span>Фото учасника (для каналу)</span>
-                        <input required type="file" name="image" class="validate">
+                        <input
+                            required
+                            type="file"
+                            name="image"
+                            class="validate"
+                            accept="image/jpeg,image/png"
+                            multiple
+                        >
                     </div>
                     <div class="file-path-wrapper">
                         <input required class="file-path" type="text" disabled>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <div class="raw">
+                <div class="file-field input-field">
+                    <div
+                            style="background-color: #4a148c !important; width: 100%"
+                            class="scale-transition btn waves-effect waves-light"
+                    >
+                        <span>Добавить видео </span>
+                        <input
+                                type="file"
+                                name="video"
+                                class="validate"
+                                accept="video/*"
+                        >
+                    </div>
+                    <div class="file-path-wrapper file-field input-field">
+                        <input placeholder="Или ссылку на видео (на Ютубе или соцсетях, Гугл диск или другой файлообменник)" id="txt" class="file-path" name="text" type="text">
+                    </div>
+                </div>
+
+            </div>
 <!--            <div class="row">-->
 <!--                <div class="col s12">-->
 <!--                    This is an inline input field:-->
@@ -76,7 +103,7 @@
 <!--                </div>-->
 <!--            </div>-->
             <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 40px;">
-                <button style="background-color: #4a148c !important;" class="btn waves-effect waves-light" type="submit">Отправить
+                <button style="background-color: #4a148c !important;margin-top: 30px" class="btn waves-effect waves-light" type="submit">Отправить
                     <i class="material-icons right">send</i>
                 </button>
             </div>

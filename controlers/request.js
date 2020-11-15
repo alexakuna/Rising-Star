@@ -7,7 +7,10 @@ module.exports.request = async function (req, res) {
             message: 'Емаил занят.'
         })
     } else {
-        req.body.image = req.file ? req.file.path : ''
+
+        req.body.image = req.files.image.map(i => {return i.path})
+        req.body.video = req.files.video[0].path
+        //console.log(req.body)
         const request = new FormRequest(req.body)
         try {
             await request.save()

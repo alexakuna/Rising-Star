@@ -39,10 +39,12 @@ const schema = new Schema({
         required: [true, 'Нужно указать Номер пошти, ПІП, телефон отримувача']
     },
     image: {
-        type: String,
+        type: Array,
         default: '',
         required: [true, 'Фотография участника обязательна']
     },
+    video: String,
+    text: String,
     created: {
         type: Date,
         default: Date.now
