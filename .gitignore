@@ -1,7 +1,6 @@
 node_modules
 .DS_Store
-photos
-video
+
 
 # local env files
 .env.local
