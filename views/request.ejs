@@ -102,8 +102,20 @@
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
+            <p>
+                <label>
+                    <input type="checkbox" onchange="isDisabled()"  required/>
+                    <span>Я согласен с обработкой персональных данных</span>
+                </label>
+            </p>
             <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 40px;">
-                <button style="background-color: #4a148c !important;margin-top: 30px" class="btn waves-effect waves-light" type="submit">Отправить
+                <button
+                    id="btn-submit-data"
+                    style="margin-top: 30px" class="btn waves-effect waves-light"
+                    type="submit"
+                    disabled
+                >
+                        Отправить
                     <i class="material-icons right">send</i>
                 </button>
             </div>

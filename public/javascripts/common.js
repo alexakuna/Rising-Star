@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded' , function() {
                 if (i.className !== 'active' && i.value !== '') i.className = 'active'
             })
     }
+
 })
 
 
+function isDisabled() {
+    const submit = document.querySelector('#btn-submit-data')
+    submit.disabled = !submit.disabled
+    submit.style.backgroundColor = '#4a148c'
+}

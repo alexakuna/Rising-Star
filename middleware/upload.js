@@ -16,7 +16,13 @@ const storage = multer.diskStorage({
 
 const fileFilter = (req, file, cb) => {
     if (
-        file.mimetype === 'image/png' || file.mimetype === 'image/jpeg' || file.mimetype === 'video/quicktime' || file.mimetype === 'video/mp4') {
+        file.mimetype === 'image/png' ||
+        file.mimetype === 'image/jpeg' ||
+        file.mimetype === 'video/quicktime' ||
+        file.mimetype === 'video/mp4' ||
+        file.mimetype === 'video/mpeg' ||
+        file.mimetype === 'video/webm'
+    ) {
         cb(null, true)
     } else {
         cb(null, false)
