@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded' , function() {
                 if (i.className !== 'active' && i.value !== '') i.className = 'active'
             })
     }
-
+    const phoneMask = IMask(
+        document.getElementById('tel'), {
+            mask: '+{3}(000)000-00-00'
+        });
 })
 
 
