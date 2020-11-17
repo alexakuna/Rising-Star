@@ -1,11 +1,4 @@
 
-// const win = window.querySelector('html')
-// const cords = win.getBoundingClientRect()
-// const mainHeight = document.querySelector('.height-main')
-// mainHeight.style.height = window.innerHeight - 64 + 'px'
-// document.onmousemove = (e) => {
-//     console.log(e)
-// }
 document.addEventListener('DOMContentLoaded' , function() {
     const elem = document.querySelectorAll('.sidenav')
     M.Sidenav.init(elem)
@@ -23,9 +16,27 @@ document.addEventListener('DOMContentLoaded' , function() {
         });
 })
 
-
+// btnSub.addEventListener('click', () => {
+//     document.querySelector('form').reset()
+//     btnSub.disabled = true
+// })
 function isDisabled() {
-    const submit = document.querySelector('#btn-submit-data')
-    submit.disabled = !submit.disabled
-    submit.style.backgroundColor = '#4a148c'
+    const btnSub = document.querySelector('#btn-submit-data')
+    btnSub.disabled ? btnSub.disabled = false : btnSub.disabled = true
+    btnSub.style.backgroundColor = '#4a148c'
 }
+
+// window.onpopstate = function(event) {
+//     console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+//     //document.getElementById('check').removeAttribute('checked')
+//
+// };
+//
+// //let stackStates = []
+// document.querySelector("body > header > nav > div > ul")
+//     .addEventListener('click', function (e){
+//         //e.preventDefault()
+//         if(e.target.tagName !== 'A') return
+//         //let target = e.target.href
+//         history.pushState(null, null)
+//     })

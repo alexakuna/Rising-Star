@@ -9,6 +9,7 @@ router.get('/request',async (req, res) => {
     const pag = pages[0]
     const home = await Home.find()
     home[0].pages = pag.pages
+    home[0].isChecked = false
     res.render('request', home[0])
 })
 

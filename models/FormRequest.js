@@ -32,7 +32,6 @@ const schema = new Schema({
     email: {
         type: String,
         required: [true, 'Нужно указать email'],
-        unique: true
     },
     pip_getter: {
         type: String,
