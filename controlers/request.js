@@ -27,7 +27,7 @@ module.exports.request = async function (req, res) {
         },
     })
     await transporter.sendMail({
-        from: `"Заявка" <${req.body.email}>`,
+        from: `"Заявка" <alevtinaischenko@gmail.com>`,
         to: "risingstarfest@gmail.com",
         subject: `Заявка: ${req.body.nomination}, ${req.body.name_organisation}`,
         html: `<div style='margin: 0 auto; width: 70%;border: #4a148c solid 1px;padding: 10px 15px'>
