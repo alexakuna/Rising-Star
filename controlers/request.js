@@ -27,7 +27,7 @@ module.exports.request = async function (req, res) {
         },
     })
     await transporter.sendMail({
-        from: `"Заявка" <alevtinaischenko@gmail.com>`,
+        from: `"Заявка" <${req.body.email}>`,
         to: "risingstarfest@gmail.com",
         subject: `Заявка: ${req.body.nomination}, ${req.body.name_organisation}`,
         html: `<div style='margin: 0 auto; width: 70%;border: #4a148c solid 1px;padding: 10px 15px'>
@@ -45,15 +45,19 @@ module.exports.request = async function (req, res) {
                     </ul>
                </div>`,
         attachments: images
-    }).catch(e => console.log(e))
+    }).catch(e => {
+        res.render('regulations/done-request', {message: 'Произошла не предвиденая ошибка.'})
+        console.log(e)
+    })
 
     req.body.image = req.files.image.map(i => {return i.path})
     req.body.video = req.files.video ? req.files.video[0].path : ''
     const request = new FormRequest(req.body)
     try {
         await request.save()
-        res.render('regulations/done-request', request)
+        res.render('regulations/done-request', {message: 'Заявка принята'})
     } catch (e) {
+        res.render('regulations/done-request', {message: 'Произошла не предвиденая ошибка.'})
         console.log(e)
     }
     //}
