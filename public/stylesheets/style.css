@@ -67,6 +67,9 @@ h1 {
   .cls-m {
     margin-left: 0 !important;
   }
+  .footer-copyright {
+    font-size: 10px;
+  }
   .cls-m-m {
     margin-top: 10px !important;
   }
@@ -104,4 +107,7 @@ h1 {
 }
 .page-footer, nav {
   background: linear-gradient(45deg, rgb(102, 20, 140), rgb(74, 20, 140));
+}
+.footer-copyright {
+  background-color: transparent !important;
 }

@@ -98,7 +98,7 @@ app.use('/pdfFromHTMLString', function(req, res){
             htmlContent: result,
             // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
             options: {
-                "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
+                "base": "http://localhost:4200/stylesheets/materialize.min.css",
                 "border": {
                     "top": "0.5in",
                     "right": "1in",

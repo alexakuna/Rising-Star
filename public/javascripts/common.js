@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded' , function() {
                 if (i.className !== 'active' && i.value !== '') i.className = 'active'
             })
     }
-    const phoneMask = IMask(
-        document.getElementById('tel'), {
-            mask: '+{3}(000)000-00-00'
-        });
+    if (document.getElementById('tel')) {
+      const mask = IMask(
+            document.getElementById('tel'), {
+                mask: '+{3}(000)000-00-00'
+        })
+        window.onunload = () => {
+            mask.destroy()
+        }
+    }
 })
 
 // btnSub.addEventListener('click', () => {
