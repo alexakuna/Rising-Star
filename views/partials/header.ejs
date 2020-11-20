@@ -21,15 +21,13 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <ul class="right hide-on-med-and-down m-right">
-            <% for(let i = 0; pages.length > i; i++) { %>
-                <% if(pages[i].show) { %>
-                <li class="<%=pages[i].url === activeUrl ? 'active' : ''%>">
+        <% for(let i = 0; pages.length > i; i++) { %>
+            <% if(pages[i].show) { %>
+                <li class="">
                     <a href="<%=pages[i].url%>"><%= pages[i].title %></a>
                 </li>
-                <% } %>
             <% } %>
-        </ul>
+        <% } %>
         <li id="btn-close" class="sidenav-close"><a href="#"><span class="material-icons">close</span></a></li>
     </ul>
 </header>
