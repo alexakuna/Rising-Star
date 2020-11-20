@@ -5,9 +5,11 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down m-right">
                 <% for(let i = 0; pages.length > i; i++) { %>
+                <% if(pages[i].show) { %>
                     <li class="<%=pages[i].url === activeUrl ? 'active' : ''%>">
                         <a href="<%=pages[i].url%>"><%= pages[i].title %></a>
                     </li>
+                    <% } %>
                 <% } %>
             </ul>
             <% if(isVisible) { %>

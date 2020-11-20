@@ -26,17 +26,3 @@ function isDisabled() {
     btnSub.style.backgroundColor = '#4a148c'
 }
 
-// window.onpopstate = function(event) {
-//     console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-//     //document.getElementById('check').removeAttribute('checked')
-//
-// };
-//
-// //let stackStates = []
-// document.querySelector("body > header > nav > div > ul")
-//     .addEventListener('click', function (e){
-//         //e.preventDefault()
-//         if(e.target.tagName !== 'A') return
-//         //let target = e.target.href
-//         history.pushState(null, null)
-//     })
