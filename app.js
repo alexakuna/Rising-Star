@@ -58,6 +58,8 @@ app.get('*', async (req, res, next) => {
     ip === '91.218.99.13'
     ||
     ip === '128.124.196.231'
+    ||
+    ip === '46.133.226.4'
         ? app.locals.isVisible = true
         : app.locals.isVisible = false
     next()
@@ -86,7 +88,7 @@ app.use('/submit', member)
 app.use('/pdfFromHTMLString', function(req, res){
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`http://localhost:4200${url}`)
+    axios.get(`https://rsfrontend.herokuapp.com${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
@@ -96,7 +98,7 @@ app.use('/pdfFromHTMLString', function(req, res){
             htmlContent: result,
             // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
             options: {
-                "base": "http://localhost:4200/stylesheets/materialize.min.css",
+                "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
                 "border": {
                     "top": "0.5in",
                     "right": "1in",
