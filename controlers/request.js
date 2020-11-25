@@ -8,7 +8,7 @@ module.exports.request = async function (req, res) {
     //         message: 'Емаил занят.'
     //     })
     // } else {
-
+    console.log(req.body)
     req.body.image = req.files.image.map(i => {return i.path})
     req.body.video = req.files.video ? req.files.video[0].path : ''
     const request = new FormRequest(req.body)

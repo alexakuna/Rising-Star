@@ -13,21 +13,31 @@ document.addEventListener('DOMContentLoaded' , function() {
     if (document.getElementById('tel')) {
       const mask = IMask(
             document.getElementById('tel'), {
-                mask: '+{3}(000)000-00-00'
+                mask: '+000(000)000-00-00',
+              lazy: false
         })
         window.onunload = () => {
             mask.destroy()
+            //instanceSelect.destroy()
         }
     }
 })
-
-// btnSub.addEventListener('click', () => {
-//     document.querySelector('form').reset()
-//     btnSub.disabled = true
+const btnSub = document.querySelector('#btn-submit-data')
+// btnSub.addEventListener('click', (e) => {
+//     checkSelect(e)
 // })
 function isDisabled() {
-    const btnSub = document.querySelector('#btn-submit-data')
     btnSub.disabled ? btnSub.disabled = false : btnSub.disabled = true
     btnSub.style.backgroundColor = '#4a148c'
 }
 
+// function checkSelect(e) {
+//     const input = document.querySelector('.helper-text-genre')
+//     const options = Array.from(document.querySelectorAll('.input-select-genre select option'))
+//     if(options.some(i => (i.selected && i.value === ''))) {
+//         input.classList.add('show-helper-text')
+//         e.preventDefault()
+//     } else {
+//         input.classList.remove('show-helper-text')
+//     }
+// }

@@ -33,6 +33,7 @@ const schema = new Schema({
         type: String,
         required: [true, 'Нужно указать email'],
     },
+    genre: String,
     pip_getter: {
         type: String,
         required: [true, 'Нужно указать Номер пошти, ПІП, телефон отримувача']

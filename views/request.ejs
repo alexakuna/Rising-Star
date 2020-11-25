@@ -9,8 +9,15 @@
         <form class="col s12 request-form" action="/submit" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="input-field col s12">
-                    <input required maxlength="100" id="country" name="country" type="text" class="validate">
+<!--                    <input required maxlength="100" id="country" name="country" type="text" class="validate">-->
                     <label for="country" class="active">Країна</label>
+                    <select class="validate" id="country" name="country" required>
+                        <option value="" disabled selected>Выберите країну</option>
+                        <% for(let i in countries) { %>
+                            <option value="<%=countries[i]%>"><%=countries[i]%></option>
+                        <% } %>
+
+                    </select>
                 </div>
                 <div class="input-field col s12">
                     <input required id="city" type="text" name="city" class="validate">
@@ -25,12 +32,41 @@
                     <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
                 </div>
                 <div class="input-field col s12">
-                    <input required id="nomination" type="text" name="nomination" class="validate">
+<!--                    <input required id="nomination" type="text" name="nomination" class="validate">-->
                     <label for="nomination" class="active">Номінація</label>
+                    <select class="validate" id="nomination" name="nomination" required>
+                        <option value="" disabled selected>Выберите номінацію</option>
+                        <option value="Вокал">Вокал</option>
+                        <option value="Инструментал">Инструментал</option>
+                        <option value="АРТ">АРТ</option>
+                        <option value="Цирк">Цирк</option>
+                        <option value="Танцы">Танцы</option>
+                        <option value="Театр">Театр</option>
+                    </select>
+                </div>
+                <div class="input-select-genre input-field col s12">
+                    <label for="genre">Жанр</label>
+                    <select class="validate" id="genre" name="genre" required>
+                        <option value="" disabled selected>Выберите жанр</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+<!--                    <span class="helper-text-genre">Необходимо выбрать жанр</span>-->
                 </div>
                 <div class="input-field col s12">
-                    <input required id="age" type="text" name="age" class="validate">
+<!--                    <input required id="age" type="text" name="age" class="validate">-->
                     <label for="age" class="active">Вікова категорія</label>
+                    <select class="validate" id="age" name="age" required>
+                        <option value="" disabled selected>Выберите вікову категорію</option>
+                        <option value="3-6 років">3-6 років</option>
+                        <option value="7-9 років">7-9 років</option>
+                        <option value="10-12 років">10-12 років</option>
+                        <option value="13-16 років">13-16 років</option>
+                        <option value="17-25 років">17-25 років</option>
+                        <option value="26 років та більше">26 років та більше</option>
+                        <option value="змішана вікова категорія">змішана вікова категорія</option>
+                    </select>
                 </div>
 
                 <div class="input-field col s12">
@@ -39,7 +75,7 @@
                 </div>
                 <div class="input-field col s12">
                     <input required id="tel" type="text" name="tel" class="validate">
-                    <label for="tel" class="active">Телефон для контакту</label>
+                    <label for="tel" class="active">Телефон для контакту в міжнародному форматі</label>
                 </div>
                 <div class="input-field col s12">
                     <input required id="email" type="email" name="email" class="validate">

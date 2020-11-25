@@ -5,6 +5,14 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+select {
+  display: block !important;
+  border-left-color: transparent !important;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom: 1px solid #9e9e9e !important;
+  outline: none !important;
+}
 .m-right {
   margin-right: 60px;
 }
@@ -101,7 +109,8 @@ h1 {
   color: #4a148c !important;
 }
 .input-field input[type=text]:focus,
-.input-field input[type=email]:focus {
+.input-field input[type=email]:focus
+{
   border-bottom: 1px solid #4a148c !important;
   box-shadow: 0 1px 0 0 #4a148c !important;
 }
@@ -110,4 +119,14 @@ h1 {
 }
 .footer-copyright {
   background-color: transparent !important;
+}
+.input-select-genre input {
+  color: #9e9e9e;
+}
+.helper-text-genre {
+  display: none;
+}
+.show-helper-text {
+  display: block !important;
+  color: red;
 }
