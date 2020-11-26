@@ -1,5 +1,7 @@
 const express = require('express')
 
+const config = require('./config/cnfg')
+
 const mongoose = require('mongoose')
 const path = require('path')
 const pdf = require('express-pdf')
@@ -29,11 +31,12 @@ if (typeof localStorage === "undefined" || localStorage === null) {
     localStorage = new LocalStorage('./scratch')
 }
 
-const uri = 'mongodb+srv://admin:15021979@rises.brol3.mongodb.net/home_page'
-
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
-    .then(() => console.log('MDB connected'))
-    .catch(err => console.log(err))
+mongoose.connect(config.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true})
+        .then(() => console.log('MDB connected'))
+        .catch(err => console.log(err))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -83,12 +86,14 @@ app.use(regulationsCircus)
 app.use(regulationsTheatre)
 app.use(regulationsDance)
 
+//Роутер для отправки заявки
 app.use('/submit', member)
 
+//Формирование pdf документа и скачивание
 app.use('/pdfFromHTMLString', function(req, res){
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`https://rsfrontend.herokuapp.com${url}`)
+    axios.get(`http://localhost:4200${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
@@ -107,7 +112,7 @@ app.use('/pdfFromHTMLString', function(req, res){
                 }
             }
         })
-    }).catch(e => console.warn(e))
+    }).catch(e => console.log(e))
 })
 
 module.exports = app
