@@ -8,6 +8,7 @@ module.exports = function (req, to, images) {
                         <li>${req.country}</li>
                         <li>${req.name_organisation}</li>
                         <li>${req.pip}</li>
+                        <li>${req.genre}</li>
                         <li>${req.nomination}</li>
                         <li>${req.age}</li>
                         <li>${req.name_performance}</li>

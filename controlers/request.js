@@ -34,8 +34,11 @@ module.exports.request = async function (req, res) {
     const request = new FormRequest(req.body)
     try {
         await request.save()
-        res.render('regulations/done-request', {message: 'Заявка принята'})
+        res.redirect('/request')
+        //res.render('regulations/done-request', {message: 'Заявка принята'})
+        localStorage.setItem('done', 'Заявка принята! В ближайшее время с вами свяжутся.')
         await transporter.sendMail(configEmailBody(req.body, config.EMAIL_TARGET, images))
+
     } catch (e) {
         res.render('regulations/done-request', {message: 'Произошла не предвиденая ошибка.'})
         console.log(e)

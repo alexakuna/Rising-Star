@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded' , function() {
 
                 if (i.className !== 'active' && i.value !== '') i.className = 'active'
             })
+
+        const ok = document.getElementById('doneMessage')
+        if(ok.dataset.done) {
+            M.toast({html: ok.dataset.done, inDuration: 2000})
+        }
     }
     if (document.getElementById('tel')) {
       const mask = IMask(
             document.getElementById('tel'), {
-                mask: '+000(000)000-00-00',
+                mask: '+00(000)000-00-00',
               lazy: false
         })
         window.onunload = () => {
