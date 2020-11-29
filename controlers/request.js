@@ -18,14 +18,26 @@ const transporter = nodemailer.createTransport({
 module.exports.request = async function (req, res) {
 
     req.body.image = req.files.image.map(i => {return i.path})
+    req.body.artimages = req.files.artimages.map(i => {return i.path})
     req.body.video = req.files.video ? req.files.video[0].path : ''
+    req.body.invoice = req.files.invoice[0].path
     const images = [
         {
             filename: req.files.video ? req.files.video[0].filename : '',
             path: req.files.video ? req.files.video[0].path : ''
+        },
+        {
+            filename: req.files.invoice[0].filename,
+            path: req.files.invoice[0].path
         }
     ]
     req.files.image.forEach(i => {
+        images.push({
+            filename: i.filename,
+            path: i.path
+        })
+    })
+    req.files.artimages.forEach(i => {
         images.push({
             filename: i.filename,
             path: i.path

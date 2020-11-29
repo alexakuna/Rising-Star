@@ -7,13 +7,13 @@
     <div class="row">
         <div class="wrapper-for-form">
             <form
-                    class="col s12 request-form"
-                    action="/submit"
-                    method="post"
-                    enctype="multipart/form-data"
+                class="col s12 request-form"
+                action="/submit"
+                method="post"
+                enctype="multipart/form-data"
             >
                 <h2 style="margin-top: 0;margin-bottom: 25px;color: #4a148c">Заявка</h2>
-                <div class="row">
+                <div style="margin-bottom: 0" class="row">
                     <div class="input-field col s12">
                         <input id="cntr" class="validate" list="country" name="country" type="text" required>
                         <span class="helper-text" data-error="Выберите страну" data-success="&#10004;"></span>
@@ -39,27 +39,47 @@
                         <span class="helper-text" data-error="Введіть прізвище, ім’я, по батькові учасника (англійською мовою)" data-success="&#10004;"></span>
                         <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
                     </div>
+                    <div class="input-select-genre input-field col s12">
+<!--                        <input-->
+<!--                            class="validate"-->
+<!--                            list="genre"-->
+<!--                            id="gen"-->
+<!--                            name="genre"-->
+<!--                            type="text"-->
+<!--                            required-->
+<!--                        >-->
+                        <label for="gen" class="active">Жанр</label>
+                        <select class="validate" id="gen" name="genre" required>
+                            <option value="" disabled selected></option>
+                            <option value="vocal">Вокал</option>
+                            <option value="instrumental">Инструментал</option>
+                            <option value="art">АРТ</option>
+                            <option value="circus">Цирк</option>
+                            <option value="dances">Танцы</option>
+                            <option value="theater">Театр</option>
+                        </select>
+                        <span class="helper-text" data-error="Выберите жанр" data-success="&#10004;"></span>
+                    </div>
                     <div class="input-field col s12">
-                        <input class="validate" id="nom" type="text" list="nomination" name="nomination" required>
+                        <input
+                            class="validate"
+                            id="nom"
+                            type="text"
+                            list="nomination"
+                            name="nomination"
+                            required
+                            autocomplete="off"
+                        >
                         <span class="helper-text" data-error="Выберите номінацію" data-success="&#10004;"></span>
                         <label for="nom" class="active">Номінація</label>
+                        <a
+                            class="btn-floating btn-small waves-effect waves-light red"
+                            id="clear-input"
+                        >
+                            <i class="material-icons">delete_forever</i>
+                        </a>
                         <datalist id="nomination">
-                            <option value="Вокал"></option>
-                            <option value="Инструментал"></option>
-                            <option value="АРТ"></option>
-                            <option value="Цирк"></option>
-                            <option value="Танцы"></option>
-                            <option value="Театр"></option>
-                        </datalist>
-                    </div>
-                    <div class="input-select-genre input-field col s12">
-                        <input class="validate" list="genre" id="gen" name="genre" type="text" required>
-                        <span class="helper-text" data-error="Выберите жанр" data-success="&#10004;"></span>
-                        <label for="gen" class="active">Жанр</label>
-                        <datalist id="genre">
-                            <option value="Option 1"></option>
-                            <option value="Option 2"></option>
-                            <option value="Option 3"></option>
+                            <!--To render nominations-->
                         </datalist>
                     </div>
                     <div class="input-field col s12">
@@ -98,31 +118,52 @@
                         <label for="pip_getter" class="active">Ім'я пошти, номер отд. або індекс, ПІБ і телефон одержувача.</label>
                     </div>
                 </div>
-                <div class="raw">
+                <div class="raw art-block-images" style="display: none">
                     <div class="file-field input-field">
                         <div
-                                style="background-color: #4a148c !important; width: 100%"
-                                class="scale-transition btn waves-effect waves-light"
-                        >
-                            <span class="text-span">Фото учасника. Максимум - 3 фотографий</span>
+                            style="background-color: #4a148c !important; width: 100%"
+                            class="scale-transition btn waves-effect waves-light">
+                            <span class="text-span">Фотографии для АРТ жанра. Максимум - 8 фотографії</span>
                             <input
-                                    required
-                                    type="file"
-                                    name="image"
-                                    class="validate"
-                                    accept="image/jpeg,image/png"
-                                    multiple
-                                    id="images-input"
+                                type="file"
+                                name="artimages"
+                                class="validate"
+                                accept="image/jpeg,image/png,image/jpg"
+                                multiple
+                                id="images-input-art"
                             >
                         </div>
-
+                        <input required class="file-path" type="text" disabled hidden>
+                        <div class="images-container">
+                            <div class="row content-images-art">
+                                <!--To render preview images-->
+                            </div>
+                        </div>
+                        <span class="error-text-images-art">Максимально допустиме кількість файлів - 8</span>
+                    </div>
+                </div>
+                <div class="raw">
+                    <div style="margin-top: 5px" class="file-field input-field">
+                        <div
+                            style="background-color: #4a148c !important; width: 100%"
+                            class="scale-transition btn waves-effect waves-light">
+                            <span class="text-span">Фото учасника. Максимум - 3 фотографії</span>
+                            <input
+                                required
+                                type="file"
+                                name="image"
+                                class="validate"
+                                accept="image/jpeg,image/png,image/jpg"
+                                multiple
+                                id="images-input"
+                            >
+                        </div>
                             <input required class="file-path" type="text" disabled hidden>
                             <div class="images-container">
                                 <div class="row content-images">
-
+                                    <!--To render preview images-->
                                 </div>
                             </div>
-
                         <span class="error-text-images">Максимально допустиме кількість файлів - 3</span>
                     </div>
                 </div>
@@ -132,37 +173,75 @@
                                 style="background-color: #4a148c !important; width: 100%"
                                 class="scale-transition btn waves-effect waves-light"
                         >
-                            <span class="text-span">Добавить видео. Розмір файлу не більше 20 мб.</span>
+                            <span class="text-span">Фотографія чека</span>
                             <input
-                                    id="video-file"
+                                    required
                                     type="file"
-                                    name="video"
+                                    name="invoice"
                                     class="validate"
-                                    accept="video/quicktime,video/mp4,video/mpeg,video/webm"
+                                    accept="image/jpeg,image/png,image/jpg"
+                                    id="images-input-invoice"
+                            >
+                        </div>
+                        <input required class="file-path" type="text" disabled hidden>
+                        <div class="images-container">
+                            <div class="row content-images-invoice">
+                                <!--To render preview images-->
+                            </div>
+                        </div>
+                        <span class="error-text-invoice">Фотографія чека обов'язкове. Одно фото.</span>
+                    </div>
+                     <span>Фотографія чека який підтверджує благодійний внесок.</span>
+                </div>
+                <div class="raw">
+                    <div class="file-field input-field">
+                        <div
+                            style="background-color: #4a148c !important; width: 100%"
+                            class="scale-transition btn waves-effect waves-light"
+                        >
+                            <span class="text-span">Добавити відео</span>
+                            <input
+                                id="video-file"
+                                type="file"
+                                name="video"
+                                class="validate"
+                                accept="video/quicktime,video/mp4,video/mpeg,video/webm"
                             >
                         </div>
                         <span class="error-text-video">Допустимый размер файла превышен.</span>
+
                         <div class="file-path-wrapper file-field input-field">
-                            <input placeholder="Ссылка на видео (на Ютубе, в соцсетях, Гугл диск и.т.п)" id="txt" class="file-path" name="text" type="text">
+                            <input
+                                placeholder="Ссылка на видео (на Ютубе, в соцсетях, Гугл диск и.т.п)"
+                                id="txt"
+                                class="file-path"
+                                name="text"
+                                type="text"
+                            >
                         </div>
+                        <span>
+                            <b style="color: tomato;">ВНИМАНИЕ!</b>
+                                Если ваш видеофайл больше 20 мб необходимо указать ссылку на скачивание.
+                        </span>
                     </div>
 
                 </div>
-                <p>
+                <p class="center">
                     <label>
                         <input
-                                id="check"
-                                type="checkbox"
-                                required
+                            id="check"
+                            type="checkbox"
+                            required
                         />
                         <span>Я согласен с обработкой персональных данных</span>
                     </label>
                 </p>
                 <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 25px;">
                     <button
-                            id="btn-submit-data"
-                            style="margin-top: 30px" class="btn waves-effect waves-light disabled"
-                            type="submit"
+                        id="btn-submit-data"
+                        style="margin-top: 30px"
+                        class="btn waves-effect waves-light disabled"
+                        type="submit"
                     >
                         Отправить
                         <i class="material-icons right">send</i>

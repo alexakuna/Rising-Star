@@ -45,6 +45,14 @@ const schema = new Schema({
     },
     video: String,
     text: String,
+    invoice: {
+        type: String,
+        required: [true, 'Скрин чека обязателен']
+    },
+    artimages: {
+        type: Array,
+        default: ''
+    },
     created: {
         type: Date,
         default: Date.now

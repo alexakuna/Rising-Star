@@ -5,14 +5,17 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-/*select {*/
-/*  display: block !important;*/
-/*  border-left-color: transparent !important;*/
-/*  border-top-color: transparent !important;*/
-/*  border-right-color: transparent !important;*/
-/*  border-bottom: 1px solid #9e9e9e !important;*/
-/*  outline: none !important;*/
-/*}*/
+main {
+  flex: 1 0 auto;
+}
+select {
+  display: block !important;
+  border-left-color: transparent !important;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom: 1px solid #9e9e9e !important;
+  outline: none !important;
+}
 .m-right {
   margin-right: 60px;
 }
@@ -24,7 +27,6 @@ body {
   width: 0;  /* ширина scrollbar'a */
   background: transparent;  /* опционально */
 }
-
 
 html {
   background-repeat: no-repeat;
@@ -98,7 +100,8 @@ h1 {
   }
 }
 .input-field input[type=text].valid,
-.input-field input[type=email].valid
+.input-field input[type=email].valid,
+.input-field select.valid
 {
   border-bottom: 1px solid #4a148c !important;
   box-shadow: 0 1px 0 0 #4a148c !important;
@@ -110,18 +113,22 @@ h1 {
 }
 input[type=text]:not(.browser-default).valid ~ .helper-text:after,
 input[type=email]:not(.browser-default).valid ~ .helper-text:after,
+select:not(.browser-default).valid ~ .helper-text:after,
 input[type=text]:not(.browser-default).valid ~ label,
-input[type=email]:not(.browser-default).valid ~ label
+input[type=email]:not(.browser-default).valid ~ label,
+select:not(.browser-default).valid ~ label
 {
   color: gold !important;
 }
 .input-field input[type=text]:focus + label,
-.input-field input[type=email]:focus + label
+.input-field input[type=email]:focus + label,
+.input-field select:focus + label
 {
   color: #4a148c !important;
 }
 .input-field input[type=text]:focus,
-.input-field input[type=email]:focus
+.input-field input[type=email]:focus,
+.input-field select:focus
 {
   border-bottom: 1px solid #4a148c !important;
   box-shadow: 0 1px 0 0 #4a148c !important;
@@ -155,18 +162,36 @@ input[type=email]:not(.browser-default).valid ~ label
 #btn-submit-data {
   background-color: #4a148c;
 }
-.error-text-images {
+.error-text-images,
+.error-text-invoice,
+.error-text-images-art,
+.error-text-video
+{
   color: #F44336;
   display: none;
 }
-.error-text-video {
-  color: #F44336;
-  display: none;
-}
+
 .wrapper-for-form {
   display: flex;
   justify-content: center;
 }
-.content-images {
+.content-images,
+.content-images-invoice,
+.content-images-art
+{
   display: flex;
+}
+.input-field {
+  margin-bottom: 0 !important;
+}
+.btn-floating.btn-small {
+  display: none;
+  position: absolute !important;
+  width: 28.4px !important;
+  height: 28.4px !important;
+  right: 12px;
+  top: -17px;
+}
+.btn-floating.btn-small i {
+  line-height: 29.4px;
 }
