@@ -13,7 +13,7 @@ router.get('/request',async (req, res) => {
     home[0].pages = pag.pages
     home[0].countries = countries.countries
 
-        home[0].done = localStorage.getItem('done') || ''
+    home[0].done = localStorage.getItem('done') || ''
 
     res.render('request', home[0])
 

@@ -5,14 +5,14 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-select {
-  display: block !important;
-  border-left-color: transparent !important;
-  border-top-color: transparent !important;
-  border-right-color: transparent !important;
-  border-bottom: 1px solid #9e9e9e !important;
-  outline: none !important;
-}
+/*select {*/
+/*  display: block !important;*/
+/*  border-left-color: transparent !important;*/
+/*  border-top-color: transparent !important;*/
+/*  border-right-color: transparent !important;*/
+/*  border-bottom: 1px solid #9e9e9e !important;*/
+/*  outline: none !important;*/
+/*}*/
 .m-right {
   margin-right: 60px;
 }
@@ -37,9 +37,7 @@ html {
   -ms-overflow-style: none;  /* IE 10+ */
   scrollbar-width: none; /* Firefox */
 }
-main {
-  flex: 1 0 auto;
-}
+
 h1 {
   color: #333333;
 }
@@ -86,6 +84,12 @@ h1 {
   .cls-m-s {
     margin-top: 6px !important;
   }
+  .request-form {
+    border: none !important;
+  }
+  .text-span {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width:320px) {
@@ -104,8 +108,16 @@ h1 {
   border-bottom: 2px solid #4a148c !important;
   border-right: 2px solid #4a148c !important;
 }
+input[type=text]:not(.browser-default).valid ~ .helper-text:after,
+input[type=email]:not(.browser-default).valid ~ .helper-text:after,
+input[type=text]:not(.browser-default).valid ~ label,
+input[type=email]:not(.browser-default).valid ~ label
+{
+  color: gold !important;
+}
 .input-field input[type=text]:focus + label,
-.input-field input[type=email]:focus + label {
+.input-field input[type=email]:focus + label
+{
   color: #4a148c !important;
 }
 .input-field input[type=text]:focus,
@@ -121,7 +133,7 @@ h1 {
   background-color: transparent !important;
 }
 .input-select-genre input {
-  color: #9e9e9e;
+  /*color: #9e9e9e;*/
 }
 .helper-text-genre {
   display: none;
@@ -129,4 +141,32 @@ h1 {
 .show-helper-text {
   display: block !important;
   color: red;
+}
+#tel {
+  color: #9e9e9e;
+}
+.request-form {
+  max-width: 500px;
+  border: #4a148c 1px solid;
+  padding: 15px 15px !important;
+  margin-top: 25px;
+  margin-left: 0 !important;
+}
+#btn-submit-data {
+  background-color: #4a148c;
+}
+.error-text-images {
+  color: #F44336;
+  display: none;
+}
+.error-text-video {
+  color: #F44336;
+  display: none;
+}
+.wrapper-for-form {
+  display: flex;
+  justify-content: center;
+}
+.content-images {
+  display: flex;
 }

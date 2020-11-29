@@ -31,6 +31,7 @@ module.exports.request = async function (req, res) {
             path: i.path
         })
     })
+    console.log(req.body)
     const request = new FormRequest(req.body)
     try {
         await request.save()

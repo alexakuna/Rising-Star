@@ -5,10 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlers/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlers/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emails/requestCandidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/emails/requestCandidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regulation.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch/url" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/url" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/request.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/request.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,7 @@
         <option value="Vue Single File Component" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,6 +47,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
@@ -106,7 +109,9 @@
       <workItem from="1604917137639" duration="58499000" />
       <workItem from="1605192140565" duration="4799000" />
       <workItem from="1605257028859" duration="82021000" />
-      <workItem from="1606120774839" duration="39821000" />
+      <workItem from="1606120774839" duration="41715000" />
+      <workItem from="1606478981856" duration="2371000" />
+      <workItem from="1606559906093" duration="27230000" />
     </task>
     <servers />
   </component>

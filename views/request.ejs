@@ -4,174 +4,177 @@
 <body>
 <%- include('partials/header.ejs') %>
 <main class="container img-wrapper-background height-main">
-<h1>Заявка</h1>
     <div class="row">
-        <form class="col s12 request-form" action="/submit" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="input-field col s12">
-<!--                    <input required maxlength="100" id="country" name="country" type="text" class="validate">-->
-                    <label for="country" class="active">Країна</label>
-                    <select class="validate" id="country" name="country" required>
-                        <option value="" disabled selected>Выберите країну</option>
-                        <% for(let i in countries) { %>
-                            <option value="<%=countries[i]%>"><%=countries[i]%></option>
-                        <% } %>
+        <div class="wrapper-for-form">
+            <form
+                    class="col s12 request-form"
+                    action="/submit"
+                    method="post"
+                    enctype="multipart/form-data"
+            >
+                <h2 style="margin-top: 0;margin-bottom: 25px;color: #4a148c">Заявка</h2>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="cntr" class="validate" list="country" name="country" type="text" required>
+                        <span class="helper-text" data-error="Выберите страну" data-success="&#10004;"></span>
+                        <label for="cntr" class="active">Країна</label>
+                        <datalist id="country">
+                            <% for(let i in countries) { %>
+                            <option value="<%=countries[i]%>"></option>
+                            <% } %>
+                        </datalist>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required id="city" type="text" name="city" class="validate">
+                        <span class="helper-text" data-error="Выберите город" data-success="&#10004;"></span>
+                        <label for="city" class="active">Місто</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required id="name_organisation" type="text" name="name_organisation" class="validate">
+                        <span class="helper-text" data-error="ім’я керівника або назва студіі" data-success="&#10004;"></span>
+                        <label for="name_organisation" class="active">Керівник або студія (ім’я або назва)</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required id="pip" type="text" name="pip" class="validate">
+                        <span class="helper-text" data-error="Введіть прізвище, ім’я, по батькові учасника (англійською мовою)" data-success="&#10004;"></span>
+                        <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input class="validate" id="nom" type="text" list="nomination" name="nomination" required>
+                        <span class="helper-text" data-error="Выберите номінацію" data-success="&#10004;"></span>
+                        <label for="nom" class="active">Номінація</label>
+                        <datalist id="nomination">
+                            <option value="Вокал"></option>
+                            <option value="Инструментал"></option>
+                            <option value="АРТ"></option>
+                            <option value="Цирк"></option>
+                            <option value="Танцы"></option>
+                            <option value="Театр"></option>
+                        </datalist>
+                    </div>
+                    <div class="input-select-genre input-field col s12">
+                        <input class="validate" list="genre" id="gen" name="genre" type="text" required>
+                        <span class="helper-text" data-error="Выберите жанр" data-success="&#10004;"></span>
+                        <label for="gen" class="active">Жанр</label>
+                        <datalist id="genre">
+                            <option value="Option 1"></option>
+                            <option value="Option 2"></option>
+                            <option value="Option 3"></option>
+                        </datalist>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="ag" list="age" class="validate" type="text" name="age" required>
+                        <span class="helper-text" data-error="Выберите вікову категорію" data-success="&#10004;"></span>
+                        <label for="ag" class="active">Вікова категорія</label>
+                        <datalist id="age">
+                            <option value="3-6 років"></option>
+                            <option value="7-9 років"></option>
+                            <option value="10-12 років"></option>
+                            <option value="13-16 років"></option>
+                            <option value="17-25 років"></option>
+                            <option value="26 років та більше"></option>
+                            <option value="змішана вікова категорія"></option>
+                        </datalist>
+                    </div>
 
-                    </select>
+                    <div class="input-field col s12">
+                        <input required id="name_performance" type="text" name="name_performance" class="validate">
+                        <span class="helper-text" data-error="Введіть назву номеру" data-success="&#10004;"></span>
+                        <label for="name_performance" class="active">Назва номеру</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input pattern="[0-9]{7,16}" required id="tel" type="text" name="tel" class="validate">
+                        <span class="helper-text" data-error="Введіть телефон без пробілів і спецсимволов. Тільки цифри" data-success="&#10004;"></span>
+                        <label for="tel" class="active">Телефон без пробілів і спецсимволов. Тільки цифри</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required id="email" type="email" name="email" class="validate">
+                        <span class="helper-text" data-error="Введіть електронну адресу" data-success="&#10004;"></span>
+                        <label for="email" class="active">Електронна адреса</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input required id="pip_getter" type="text" name="pip_getter" class="validate">
+                        <span class="helper-text" data-error="Необхідно заповнити це поле" data-success="&#10004;"></span>
+                        <label for="pip_getter" class="active">Ім'я пошти, номер отд. або індекс, ПІБ і телефон одержувача.</label>
+                    </div>
                 </div>
-                <div class="input-field col s12">
-                    <input required id="city" type="text" name="city" class="validate">
-                    <label for="city" class="active">Місто</label>
-                </div>
-                <div class="input-field col s12">
-                    <input required id="name_organisation" type="text" name="name_organisation" class="validate">
-                    <label for="name_organisation" class="active">Керівник або студія (ім’я або назва)</label>
-                </div>
-                <div class="input-field col s12">
-                    <input required id="pip" type="text" name="pip" class="validate">
-                    <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
-                </div>
-                <div class="input-field col s12">
-<!--                    <input required id="nomination" type="text" name="nomination" class="validate">-->
-                    <label for="nomination" class="active">Номінація</label>
-                    <select class="validate" id="nomination" name="nomination" required>
-                        <option value="" disabled selected>Выберите номінацію</option>
-                        <option value="Вокал">Вокал</option>
-                        <option value="Инструментал">Инструментал</option>
-                        <option value="АРТ">АРТ</option>
-                        <option value="Цирк">Цирк</option>
-                        <option value="Танцы">Танцы</option>
-                        <option value="Театр">Театр</option>
-                    </select>
-                </div>
-                <div class="input-select-genre input-field col s12">
-                    <label for="genre">Жанр</label>
-                    <select class="validate" id="genre" name="genre" required>
-                        <option value="" disabled selected>Выберите жанр</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-<!--                    <span class="helper-text-genre">Необходимо выбрать жанр</span>-->
-                </div>
-                <div class="input-field col s12">
-<!--                    <input required id="age" type="text" name="age" class="validate">-->
-                    <label for="age" class="active">Вікова категорія</label>
-                    <select class="validate" id="age" name="age" required>
-                        <option value="" disabled selected>Выберите вікову категорію</option>
-                        <option value="3-6 років">3-6 років</option>
-                        <option value="7-9 років">7-9 років</option>
-                        <option value="10-12 років">10-12 років</option>
-                        <option value="13-16 років">13-16 років</option>
-                        <option value="17-25 років">17-25 років</option>
-                        <option value="26 років та більше">26 років та більше</option>
-                        <option value="змішана вікова категорія">змішана вікова категорія</option>
-                    </select>
-                </div>
-
-                <div class="input-field col s12">
-                    <input required id="name_performance" type="text" name="name_performance" class="validate">
-                    <label for="name_performance" class="active">Назва номеру</label>
-                </div>
-                <div class="input-field col s12">
-                    <input required id="tel" type="text" name="tel" class="validate">
-                    <label for="tel" class="active">Телефон для контакту в міжнародному форматі</label>
-                </div>
-                <div class="input-field col s12">
-                    <input required id="email" type="email" name="email" class="validate">
-                    <label for="email" class="active">Електронна адреса</label>
-                </div>
-                <div class="input-field col s12">
-                    <input required id="pip_getter" type="text" name="pip_getter" class="validate">
-                    <label for="pip_getter" class="active">Номер пошти, ПІП, телефон отримувача</label>
-                </div>
-            </div>
-            <div class="raw">
-                <div class="file-field input-field">
-                    <div
-                        style="background-color: #4a148c !important; width: 100%"
-                        class="scale-transition btn waves-effect waves-light"
-                    >
-                        <span>Фото учасника (для каналу)</span>
-                        <input
-                            required
-                            type="file"
-                            name="image"
-                            class="validate"
-                            accept="image/jpeg,image/png"
-                            multiple
+                <div class="raw">
+                    <div class="file-field input-field">
+                        <div
+                                style="background-color: #4a148c !important; width: 100%"
+                                class="scale-transition btn waves-effect waves-light"
                         >
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input required class="file-path" type="text" disabled>
+                            <span class="text-span">Фото учасника. Максимум - 3 фотографий</span>
+                            <input
+                                    required
+                                    type="file"
+                                    name="image"
+                                    class="validate"
+                                    accept="image/jpeg,image/png"
+                                    multiple
+                                    id="images-input"
+                            >
+                        </div>
+
+                            <input required class="file-path" type="text" disabled hidden>
+                            <div class="images-container">
+                                <div class="row content-images">
+
+                                </div>
+                            </div>
+
+                        <span class="error-text-images">Максимально допустиме кількість файлів - 3</span>
                     </div>
                 </div>
-
-            </div>
-            <div class="raw">
-                <div class="file-field input-field">
-                    <div
-                            style="background-color: #4a148c !important; width: 100%"
-                            class="scale-transition btn waves-effect waves-light"
-                    >
-                        <span>Добавить видео </span>
-                        <input
-                                type="file"
-                                name="video"
-                                class="validate"
-                                accept="video/quicktime,video/mp4,video/mpeg,video/webm"
+                <div class="raw">
+                    <div class="file-field input-field">
+                        <div
+                                style="background-color: #4a148c !important; width: 100%"
+                                class="scale-transition btn waves-effect waves-light"
                         >
+                            <span class="text-span">Добавить видео. Розмір файлу не більше 20 мб.</span>
+                            <input
+                                    id="video-file"
+                                    type="file"
+                                    name="video"
+                                    class="validate"
+                                    accept="video/quicktime,video/mp4,video/mpeg,video/webm"
+                            >
+                        </div>
+                        <span class="error-text-video">Допустимый размер файла превышен.</span>
+                        <div class="file-path-wrapper file-field input-field">
+                            <input placeholder="Ссылка на видео (на Ютубе, в соцсетях, Гугл диск и.т.п)" id="txt" class="file-path" name="text" type="text">
+                        </div>
                     </div>
-                    <div class="file-path-wrapper file-field input-field">
-                        <input placeholder="Или ссылку на видео (на Ютубе или соцсетях, Гугл диск или другой файлообменник)" id="txt" class="file-path" name="text" type="text">
-                    </div>
-                </div>
 
-            </div>
-<!--            <div class="row">-->
-<!--                <div class="col s12">-->
-<!--                    This is an inline input field:-->
-<!--                    <div class="input-field inline">-->
-<!--                        <input id="email_inline" type="email" class="validate">-->
-<!--                        <label for="email_inline">Email</label>-->
-<!--                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-            <p>
-                <label>
-                    <input
-                        id="check"
-                        type="checkbox"
-                        onchange="isDisabled()"
-                        required
-                    />
-                    <span>Я согласен с обработкой персональных данных</span>
-                </label>
-            </p>
-            <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 40px;">
-                <button
-                    id="btn-submit-data"
-                    style="margin-top: 30px" class="btn waves-effect waves-light"
-                    type="submit"
-                    disabled
-                >
+                </div>
+                <p>
+                    <label>
+                        <input
+                                id="check"
+                                type="checkbox"
+                                required
+                        />
+                        <span>Я согласен с обработкой персональных данных</span>
+                    </label>
+                </p>
+                <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 25px;">
+                    <button
+                            id="btn-submit-data"
+                            style="margin-top: 30px" class="btn waves-effect waves-light disabled"
+                            type="submit"
+                    >
                         Отправить
-                    <i class="material-icons right">send</i>
-                </button>
-            </div>
-            <input id="doneMessage" type="hidden" data-done="<%=done%>">
-        </form>
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <input id="doneMessage" type="hidden" data-done="<%=done%>">
+            </form>
+        </div>
     </div>
-
-
 </main>
 <%- include('partials/footer.ejs') %>
-
 <script src="/javascripts/materialize.js" ></script>
-<script src="/javascripts/imask.min.js" ></script>
-
 <script src="/javascripts/common.js"></script>
-
 </body>
 </html>
