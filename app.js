@@ -84,7 +84,7 @@ app.use('/submit', member)
 app.use('/pdfFromHTMLString', (req, res) => {
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`http://localhost:4200${url}`)
+    axios.get(`https://rsfrontend.herokuapp.com${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')

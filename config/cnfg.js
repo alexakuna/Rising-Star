@@ -6,7 +6,7 @@ module.exports = {
     CLIENT_ID: '347353510636-b4bv0j62egnh86dfu804t6efcvd7hehq.apps.googleusercontent.com',
     CLIENT_SECRET: 'c3IJ1GAxtqv5J6MaGw3l056m',
     OPTIONS_PDF: {
-        "base": "http://localhost:4200/stylesheets/materialize.min.css",
+        "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
         "border": {
             "top": "0.5in",
             "right": "1in",
