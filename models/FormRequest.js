@@ -51,7 +51,6 @@ const schema = new Schema({
     },
     artimages: {
         type: Array,
-        default: ''
     },
     created: {
         type: Date,

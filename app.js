@@ -26,11 +26,12 @@ const member = require('./routes/member')
 
 const app = express()
 
-if (typeof localStorage === "undefined" || localStorage === null) {
+// Эмуляция localStorage на бэкенде
+if (typeof localStorage === 'undefined' || localStorage === null) {
     const LocalStorage = require('node-localstorage').LocalStorage
-    localStorage = new LocalStorage('./scratch')
+    localStorage = new LocalStorage('./scratch', 6 * 1024 * 1024)
 }
-
+//Подключаемся к БД (mongodb Атлас)
 mongoose.connect(config.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -54,17 +55,7 @@ app.get('*', async (req, res, next) => {
         localStorage.setItem('url', req.params[0])
     }
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
-    ip === '159.224.186.64'
-    ||
-    ip === '::1'
-    ||
-    ip === '91.218.99.13'
-    ||
-    ip === '128.124.196.231'
-    ||
-    ip === '46.133.226.4'
-        ? app.locals.isVisible = true
-        : app.locals.isVisible = false
+    app.locals.isVisible = config.ALLOW_IP.some(candidate =>  ip === candidate)
     next()
 })
 
@@ -90,10 +81,10 @@ app.use(regulationsDance)
 app.use('/submit', member)
 
 //Формирование pdf документа и скачивание
-app.use('/pdfFromHTMLString', function(req, res){
+app.use('/pdfFromHTMLString', (req, res) => {
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`https://rsfrontend.herokuapp.com${url}`)
+    axios.get(`http://localhost:4200${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')
@@ -101,18 +92,10 @@ app.use('/pdfFromHTMLString', function(req, res){
         res.pdfFromHTML({
             filename: `${url.replace('/', '')}.pdf`,
             htmlContent: result,
-            // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт / https://rsfrontend.herokuapp.com
-            options: {
-                "base": "https://rsfrontend.herokuapp.com/stylesheets/materialize.min.css",
-                "border": {
-                    "top": "0.5in",
-                    "right": "1in",
-                    "bottom": "0.5in",
-                    "left": "1in"
-                }
-            }
+            // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
+            // https://rsfrontend.herokuapp.com
+            options: config.OPTIONS_PDF
         })
     }).catch(e => console.log(e))
 })
-
 module.exports = app

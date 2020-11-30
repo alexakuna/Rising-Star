@@ -1,22 +1,12 @@
 
 document.addEventListener('DOMContentLoaded' , function() {
-
-    const elem = document.querySelectorAll('.sidenav')
-    M.Sidenav.init(elem)
-
     const form = document.querySelector('.request-form')
+    const nav = document.querySelectorAll('.sidenav')
+
+    M.Sidenav.init(nav)
 
     if(form) {
-        form.querySelectorAll('label')
-            .forEach(function (i) {
-
-                if (i.className !== 'active' && i.value !== '') i.className = 'active'
-            })
-
-        const ok = document.getElementById('doneMessage')
-        if(ok.dataset.done) {
-            M.toast({html: ok.dataset.done, inDuration: 2000})
-        }
+        const ok = document.querySelector('#doneMessage')
         const checkbox = form.querySelector('#check')
         const btn = form.querySelector('#btn-submit-data')
         const inputFiles = form.querySelector('#images-input')
@@ -27,6 +17,14 @@ document.addEventListener('DOMContentLoaded' , function() {
         const err2 = form.querySelector('.error-text-invoice')
         const err3 = form.querySelector('.error-text-images-art')
         const artImages = form.querySelector('#images-input-art')
+
+        form.querySelectorAll('label')
+            .forEach(function (i) {
+                if (i.className !== 'active' && i.value !== '') i.className = 'active'
+            })
+        if(ok.dataset.done) {
+            M.toast({html: ok.dataset.done, inDuration: 1700})
+        }
 
         video.addEventListener('change', () => {
             if (video.files.length) {

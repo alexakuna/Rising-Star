@@ -25,7 +25,6 @@ server.on('listening', onListening);
  */
 function normalizePort(val) {
   let port = parseInt(val, 10);
-
   if (isNaN(port)) {
     // named pipe
     return val;
@@ -43,9 +42,7 @@ function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
-
   let bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
-
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':

@@ -18,9 +18,10 @@ const transporter = nodemailer.createTransport({
 module.exports.request = async function (req, res) {
 
     req.body.image = req.files.image.map(i => {return i.path})
-    req.body.artimages = req.files.artimages.map(i => {return i.path})
+    req.body.artimages = req.files.artimages ? req.files.artimages.map(i => {return i.path}) : ''
     req.body.video = req.files.video ? req.files.video[0].path : ''
     req.body.invoice = req.files.invoice[0].path
+
     const images = [
         {
             filename: req.files.video ? req.files.video[0].filename : '',
@@ -37,18 +38,18 @@ module.exports.request = async function (req, res) {
             path: i.path
         })
     })
-    req.files.artimages.forEach(i => {
-        images.push({
-            filename: i.filename,
-            path: i.path
+    if(req.files.artimages) {
+        req.files.artimages.forEach(i => {
+            images.push({
+                filename: i.filename,
+                path: i.path
+            })
         })
-    })
-    console.log(req.body)
+    }
     const request = new FormRequest(req.body)
     try {
         await request.save()
         res.redirect('/request')
-        //res.render('regulations/done-request', {message: 'Заявка принята'})
         localStorage.setItem('done', 'Заявка принята! В ближайшее время с вами свяжутся.')
         await transporter.sendMail(configEmailBody(req.body, config.EMAIL_TARGET, images))
 
