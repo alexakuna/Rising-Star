@@ -23,7 +23,6 @@ const regulationsCircus = require('./routes/regulations/circus')
 const regulationsTheatre = require('./routes/regulations/teatr')
 const regulationsDance = require('./routes/regulations/dance')
 const member = require('./routes/member')
-
 const app = express()
 
 // Эмуляция localStorage на бэкенде
@@ -84,7 +83,7 @@ app.use('/submit', member)
 app.use('/pdfFromHTMLString', (req, res) => {
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
     const url = localStorage.getItem('url')
-    axios.get(`https://rsfrontend.herokuapp.com${url}`)
+    axios.get(`${config.BASE_URL}${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')

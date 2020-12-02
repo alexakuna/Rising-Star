@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded' , function() {
 
         video.addEventListener('change', () => {
             if (video.files.length) {
-                if (video.files[0].size > 20000000) {
+                if (video.files[0].size > 1024 * 1024 * 500) {
                     checkbox.checked = false
                     form.querySelector('.error-text-video').style.display = 'block'
                     btn.classList.add('disabled')

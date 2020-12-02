@@ -1,5 +1,5 @@
-const multer = require('multer');
-const moment = require('moment');
+const multer = require('multer')
+const moment = require('moment')
 
 
 
@@ -10,10 +10,10 @@ const storage = multer.diskStorage({
         cb(null, 'public/images')
     },
     filename(req, file, cb) {
-        const date = moment().format('DDMMYYYY-MMmmss_SSS');
-        cb(null, `${date}-${file.originalname}`);
+        const date = moment().format('DDMMYYYY-MMmmss_SSS')
+        cb(null, `${date}-${file.originalname}`)
     }
-});
+})
 
 const fileFilter = (req, file, cb) => {
     if (
@@ -28,10 +28,10 @@ const fileFilter = (req, file, cb) => {
     } else {
         cb(null, false)
     }
-};
+}
 
 const limits = {
-    fileSize: 1024 * 1024 * 50
-};
+    fileSize: 1024 * 1024 * 500
+}
 
 module.exports = multer({storage, fileFilter, limits});
