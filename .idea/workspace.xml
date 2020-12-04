@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/cnfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cnfg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch/url" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/url" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,7 @@
       <workItem from="1605257028859" duration="82021000" />
       <workItem from="1606120774839" duration="41715000" />
       <workItem from="1606478981856" duration="2371000" />
-      <workItem from="1606559906093" duration="92587000" />
+      <workItem from="1606559906093" duration="96750000" />
     </task>
     <servers />
   </component>
