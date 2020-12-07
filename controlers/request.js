@@ -91,7 +91,7 @@ module.exports.request = async function (req, res) {
         console.log(e)
     }
 
-    function helpPushVideo() { //
+    function helpPushVideo() {
         if(newPathVideo) {
             images.push({
                 filename: newNameVideo,
