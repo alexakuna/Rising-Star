@@ -1,2 +1,2 @@
 # Test comment
-http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu
+:repo:deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu
