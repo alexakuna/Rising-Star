@@ -1,15 +1,9 @@
 const {Router} = require('express')
+const options = require('../config/cnfg')
 const controller = require('../controlers/request')
 const upload = require('../middleware/upload')
 const router = Router()
 
-router.post('/', upload.fields(
-[
-        {name: 'invoice', maxCount: 1},
-        {name: 'image', maxCount: 3},
-        {name: 'video', maxCount: 1},
-        {name: 'artimages', maxCount: 8}
-     ]
-), controller.request)
+router.post('/', upload.fields(options.UPLOAD_OPTIONS), controller.request)
 
 module.exports = router

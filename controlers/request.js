@@ -47,6 +47,7 @@ module.exports.request = async function (req, res) {
             })
         })
     }
+
     const options = {
         input: req.files.video ? req.files.video[0].path : '',
         output: newPathVideo,
@@ -57,18 +58,19 @@ module.exports.request = async function (req, res) {
         const result = await hbjs.run(options)
         console.log(`${result.stdout}End decoding video`)
     }
+
     //console.log(req.body)
     const request = new FormRequest(req.body) // Созд. инстанс для сохр. в БД
     try {
         await request.save() // Сохраняем в БД
-        res.redirect('/request') // редирект на стр. Заявки
+
         localStorage.setItem('done', 'Заявка принята! В ближайшее время с вами свяжутся.')
         if(newPathVideo) {
             await startEncoding() // Сжимаем видео
         }
         await transporter // Отправляем на почту
             .sendMail(configEmailBody(req.body, config.EMAIL_TARGET, helpPushVideo()))
-
+        res.redirect('/request') // редирект на стр. Заявки
         images.forEach(i => fs.unlink( // Удаляем файлы
             i.path, (err) => {
             if(err) {

@@ -22,7 +22,8 @@ const fileFilter = (req, file, cb) => {
         file.mimetype === 'video/quicktime' ||
         file.mimetype === 'video/mp4' ||
         file.mimetype === 'video/mpeg' ||
-        file.mimetype === 'video/webm'
+        file.mimetype === 'video/webm' ||
+        file.mimetype === 'video/avi'
     ) {
         cb(null, true)
     } else {
@@ -34,4 +35,4 @@ const limits = {
     fileSize: 1024 * 1024 * 500
 }
 
-module.exports = multer({storage, fileFilter, limits});
+module.exports = multer({storage, fileFilter, limits})

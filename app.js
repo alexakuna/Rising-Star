@@ -4,6 +4,7 @@ const config = require('./config/cnfg')
 
 const mongoose = require('mongoose')
 const path = require('path')
+const logger = require('morgan')
 const pdf = require('express-pdf')
 const axios = require('axios')
 const cors = require('cors')
@@ -42,6 +43,7 @@ mongoose.connect(config.MONGO_URI, {
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
+// app.use(logger('dev'))
 app.use(pdf)
 app.use(cors())
 app.use(express.json());

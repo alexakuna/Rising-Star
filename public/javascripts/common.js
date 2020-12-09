@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded' , function() {
     M.Sidenav.init(nav)
 
     if(form) {
+
+        const modalEl = document.querySelector('.modal');
+        const modalInstances = M.Modal.init(modalEl)
+
         const ok = document.querySelector('#doneMessage')
         const checkbox = form.querySelector('#check')
         const btn = form.querySelector('#btn-submit-data')
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded' , function() {
 
         video.addEventListener('change', () => {
             if (video.files.length) {
-                if (video.files[0].size > 1024 * 1024 * 500) {
+                if (video.files[0].size > 1024 * 1024 * 477) {
                     checkbox.checked = false
                     form.querySelector('.error-text-video').style.display = 'block'
                     btn.classList.add('disabled')
@@ -227,5 +231,8 @@ document.addEventListener('DOMContentLoaded' , function() {
                 art.style.display = 'none'
             }
         }
+        btn.addEventListener('click', () => {
+            modalInstances.open()
+        })
     }
 })
