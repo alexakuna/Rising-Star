@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-module.exports.ucm = async function (req, res, next) {
+module.exports.ucm = async function (req, res) {
 
     const newPathVideo = req.files.video ? `${req.files.video[0].path.split('.')[0]}.mp4` : ''
     const newNameVideo = req.files.video ? `${req.files.video[0].filename.split('.')[0]}.mp4` : ''
@@ -59,12 +59,9 @@ module.exports.ucm = async function (req, res, next) {
         console.log(`${result.stdout}End decoding video`)
     }
 
-    //console.log(req.body)
     const request = new FormRequest(req.body) // Созд. инстанс для сохр. в БД
     try {
         await request.save() // Сохраняем в БД
-
-        localStorage.setItem('done', 'Заявка принята! В ближайшее время с вами свяжутся.')
         if(newPathVideo) {
             await startEncoding() // Сжимаем видео
         }
@@ -91,7 +88,7 @@ module.exports.ucm = async function (req, res, next) {
         console.log(e)
     }
 
-    function helpPushVideo() { //
+    function helpPushVideo() {
         if(newPathVideo) {
             images.push({
                 filename: newNameVideo,
@@ -102,5 +99,5 @@ module.exports.ucm = async function (req, res, next) {
             return images
         }
     }
-    next()
+    //next()
 }

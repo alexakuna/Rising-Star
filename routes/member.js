@@ -5,7 +5,7 @@ const controllerUCM = require('../controlers/uploadCompressingMailing')
 const upload = require('../middleware/upload')
 const router = Router()
 
-router.get('/', controller.request)
+router.post('/', controller.request)
 router.post('/', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
 
 module.exports = router
