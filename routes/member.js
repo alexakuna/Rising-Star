@@ -1,11 +1,11 @@
 const {Router} = require('express')
 const options = require('../config/cnfg')
 const controller = require('../controlers/request')
-const controllerUCM = require('../controlers/uploadCompressingMailing')
-const upload = require('../middleware/upload')
+ const controllerUCM = require('../controlers/uploadCompressingMailing')
+ const upload = require('../middleware/upload')
 const router = Router()
 
-router.post('/', controller.request, upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
-//router.post('/', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
+router.post('/', controller.request)
+router.use('/', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
 
 module.exports = router
