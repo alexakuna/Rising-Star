@@ -1,8 +1,6 @@
 const express = require('express')
 
 const config = require('./config/cnfg')
-const controllerUCM = require('./controlers/uploadCompressingMailing')
-const upload = require('./middleware/upload')
 const mongoose = require('mongoose')
 const path = require('path')
 //const logger = require('morgan')
@@ -81,7 +79,6 @@ app.use(regulationsDance)
 
 //Роутер для отправки заявки
 app.use('/submit', member)
-//app.use('/submit', upload.fields(config.UPLOAD_OPTIONS), controllerUCM.ucm)
 
 //Формирование pdf документа и скачивание
 app.use('/pdfFromHTMLString', (req, res) => {

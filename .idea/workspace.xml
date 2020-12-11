@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlers/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlers/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlers/uploadCompressingMailing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/member.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/request.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/request.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +110,7 @@
       <workItem from="1606120774839" duration="41715000" />
       <workItem from="1606478981856" duration="2371000" />
       <workItem from="1606559906093" duration="98119000" />
-      <workItem from="1607325934770" duration="48187000" />
+      <workItem from="1607325934770" duration="50964000" />
     </task>
     <servers />
   </component>
@@ -117,10 +122,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="422" y="184" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1607369932133" />
-    <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607445237019">
+    <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607707106849">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607445237019" />
+    <state x="421" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607707106849" />
     <state x="213" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1606819369335">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
