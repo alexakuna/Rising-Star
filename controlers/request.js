@@ -105,7 +105,7 @@ module.exports.request = async function (req, res, next) {
     //         return images
     //     }
     // }
-    next()
+    next('route')
 }
 
 // module.exports.getById = async function (req, res) {
