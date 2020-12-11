@@ -80,8 +80,8 @@ app.use(regulationsTheatre)
 app.use(regulationsDance)
 
 //Роутер для отправки заявки
-app.use('/submit', member)
 app.use('/submit', upload.fields(config.UPLOAD_OPTIONS), controllerUCM.ucm)
+app.use('/submit', member)
 
 //Формирование pdf документа и скачивание
 app.use('/pdfFromHTMLString', (req, res) => {
