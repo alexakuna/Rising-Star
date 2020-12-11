@@ -6,6 +6,6 @@ const controller = require('../controlers/request')
 const router = Router()
 
 router.get('/', controller.request)
-router.use('/', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
+router.post('/', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
 
 module.exports = router
