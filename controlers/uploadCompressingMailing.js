@@ -99,5 +99,6 @@ module.exports.ucm = async function (req, res) {
             return images
         }
     }
+    res.json({message: 'Done'})
     //next()
 }
