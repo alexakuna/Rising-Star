@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-module.exports.ucm = async function (req, res) {
+module.exports.ucm = async function (req, res, next) {
 
     const newPathVideo = req.files.video ? `${req.files.video[0].path.split('.')[0]}.mp4` : ''
     const newNameVideo = req.files.video ? `${req.files.video[0].filename.split('.')[0]}.mp4` : ''
@@ -99,6 +99,6 @@ module.exports.ucm = async function (req, res) {
             return images
         }
     }
-    res.json({message: 'Done'})
-    //next()
+    //res.json({message: 'Done'})
+    next()
 }

@@ -1,10 +1,11 @@
 const express = require('express')
 
 const config = require('./config/cnfg')
-
+const controllerUCM = require('./controlers/uploadCompressingMailing')
+const upload = require('./middleware/upload')
 const mongoose = require('mongoose')
 const path = require('path')
-const logger = require('morgan')
+//const logger = require('morgan')
 const pdf = require('express-pdf')
 const axios = require('axios')
 const cors = require('cors')
@@ -80,6 +81,7 @@ app.use(regulationsDance)
 
 //Роутер для отправки заявки
 app.use('/submit', member)
+app.use('/submit', upload.fields(options.UPLOAD_OPTIONS), controllerUCM.ucm)
 
 //Формирование pdf документа и скачивание
 app.use('/pdfFromHTMLString', (req, res) => {
