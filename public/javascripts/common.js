@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded' , function() {
 
     if(form) {
 
-        const modalEl = form.querySelectorAll('.modal');
-        const modalInstances = M.Modal.init(modalEl, {dismissible: false})
+        //const modalEl = form.querySelectorAll('.modal');
+        //const modalInstances = M.Modal.init(modalEl, {dismissible: false})
 
         const ok = document.querySelector('#doneMessage')
         const checkbox = form.querySelector('#check')
@@ -231,20 +231,20 @@ document.addEventListener('DOMContentLoaded' , function() {
                 art.style.display = 'none'
             }
         }
-        btn.addEventListener('click', () => {
-            const el = form.querySelector('.determinate')
-            let time = 0
-            modalInstances[0].open()
-            const item = setInterval(() => {
-                let i = time += 1
-                el.style.width = i + '%'
-            }, 80)
-            setTimeout(() => {
-                clearInterval(item)
-                modalInstances[0].close()
-                modalInstances[1].open()
-            }, 8000)
-
-        })
+        // btn.addEventListener('click', () => {
+        //     const el = form.querySelector('.determinate')
+        //     let time = 0
+        //     modalInstances[0].open()
+        //     const item = setInterval(() => {
+        //         let i = time += 1
+        //         el.style.width = i + '%'
+        //     }, 80)
+        //     setTimeout(() => {
+        //         clearInterval(item)
+        //         modalInstances[0].close()
+        //         modalInstances[1].open()
+        //     }, 8000)
+        //
+        // })
     }
 })
