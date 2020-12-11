@@ -117,6 +117,10 @@ select:not(.browser-default).valid ~ label
   margin-top: 25px;
   margin-left: 0 !important;
 }
+.invoice_icon {
+  line-height: 0 !important;
+  color: tomato;
+}
 #btn-submit-data {
   background-color: #4a148c;
 }

@@ -7,6 +7,7 @@
     <div class="row">
         <div class="wrapper-for-form">
             <form
+                name="request_form"
                 class="col s12 request-form"
                 action="/submit"
                 method="POST"
@@ -170,17 +171,17 @@
                 <div class="raw">
                     <div class="file-field input-field">
                         <div
-                                style="background-color: #4a148c !important; width: 100%"
-                                class="scale-transition btn waves-effect waves-light"
+                            style="background-color: #4a148c !important; width: 100%"
+                            class="scale-transition btn waves-effect waves-light"
                         >
                             <span class="text-span">Фотографія чека</span>
                             <input
-                                    required
-                                    type="file"
-                                    name="invoice"
-                                    class="validate"
-                                    accept="image/jpeg,image/png,image/jpg"
-                                    id="images-input-invoice"
+                                required
+                                type="file"
+                                name="invoice"
+                                class="validate"
+                                accept="image/jpeg,image/png,image/jpg"
+                                id="images-input-invoice"
                             >
                         </div>
                         <input required class="file-path" type="text" disabled hidden>
@@ -191,7 +192,10 @@
                         </div>
                         <span class="error-text-invoice">Фотографія чека обов'язкове. Одно фото.</span>
                     </div>
-                     <span>Фотографія чека який підтверджує благодійний внесок.</span>
+                     <span>
+                         <i class="material-icons invoice_icon">error_outline</i>
+                          Фотографія чека який підтверджує благодійний внесок.
+                     </span>
                 </div>
                 <div class="raw">
                     <div class="file-field input-field">
@@ -222,6 +226,7 @@
                         <span>
                             <b style="color: tomato;">ВНИМАНИЕ!</b>
                                 Если ваш видеофайл больше 500 мб необходимо указать ссылку на скачивание.
+                            <span class="size_video_file deep-purple-text"></span>
                         </span>
                     </div>
 
@@ -231,6 +236,7 @@
                         <input
                             id="check"
                             type="checkbox"
+                            name="check_box"
                             required
                         />
                         <span>Я согласен с обработкой персональных данных</span>
@@ -254,9 +260,7 @@
                             <div class="indeterminate"></div>
                         </div>
                         <p>
-                            <i class="material-icons">
-                                error_outline
-                            </i>
+                            <i class="material-icons">error_outline</i>
                             Заявка обрабатывается не перезагружайте страницу. Дождитесь зарузки данных на сервер.
                         </p>
                         <p>
@@ -264,22 +268,13 @@
                         </p>
                     </div>
                 </div>
-<!--                <div id="modal1" class="modal">-->
-<!--                    <div class="modal-content">-->
-<!--                        <h4>Заявка принята!</h4>-->
-<!--                        <p>В ближайшее время с вами свяжутся.</p>-->
-<!--                    </div>-->
-<!--                    <div class="modal-footer">-->
-<!--                        <a href="/request" class="modal-close waves-effect waves-green btn-flat">Заполнить еще заявку</a>-->
-<!--                        <a href="/" class="modal-close waves-effect waves-green btn-flat">На главную</a>-->
-<!--                    </div>-->
-<!--                </div>-->
             </form>
         </div>
     </div>
 </main>
 <%- include('partials/footer.ejs') %>
 <script src="/javascripts/materialize.js" ></script>
+<script src="/javascripts/validate.js"></script>
 <script src="/javascripts/common.js"></script>
 </body>
 </html>

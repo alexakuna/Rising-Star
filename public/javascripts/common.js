@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded' , function() {
 
         video.addEventListener('change', () => {
             if (video.files.length) {
+                form.querySelector('.size_video_file')
+                    .innerHTML = `Текущий размер файла: ${(video.files[0].size / 1000000).toFixed()} mb`
                 if (video.files[0].size > 1024 * 1024 * 477) {
                     checkbox.checked = false
                     form.querySelector('.error-text-video').style.display = 'block'
@@ -232,19 +234,70 @@ document.addEventListener('DOMContentLoaded' , function() {
             }
         }
         btn.addEventListener('click', () => {
-            // const el = form.querySelector('.determinate')
-            // let time = 0
-            modalInstances[0].open()
-            // const item = setInterval(() => {
-            //     let i = time += 1
-            //     el.style.width = i + '%'
-            // }, 80)
-            // setTimeout(() => {
-            //     clearInterval(item)
-            //     modalInstances[0].close()
-            //     modalInstances[1].open()
-            // }, 8000)
-
+            const validator = new FormValidator('request_form', [{
+                name: 'country',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'city',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'name_organisation',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'pip',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'email',
+                display: 'required',
+                rules: 'valid_email'
+            }, {
+                name: 'genre',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'nomination',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'age',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'name_performance',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'tel',
+                display: 'required',
+                rules: 'numeric'
+            },{
+                name: 'pip_getter',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'image',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'invoice',
+                display: 'required',
+                rules: 'required'
+            }, {
+                name: 'check_box',
+                display: 'required',
+                rules: 'required'
+            }], function(errors, event) {
+                if (errors.length > 0) {
+                    // Show the errors
+                    event.preventDefault()
+                } else {
+                    modalInstances[0].open()
+                }
+            })
         })
     }
 })
