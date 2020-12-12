@@ -203,7 +203,7 @@
                             style="background-color: #4a148c !important; width: 100%"
                             class="scale-transition btn waves-effect waves-light"
                         >
-                            <span class="text-span">Добавити відео</span>
+                            <span class="text-span">Добавити відео файл</span>
                             <input
                                 id="video-file"
                                 type="file"
@@ -216,16 +216,17 @@
 
                         <div class="file-path-wrapper file-field input-field">
                             <input
-                                placeholder="Ссылка на видео (на Ютубе, в соцсетях, Гугл диск и.т.п)"
+                                placeholder="Или добавте ссылку на видео"
                                 id="txt"
                                 class="file-path"
                                 name="text"
                                 type="text"
                             >
+                            <i class="material-icons insert_link">insert_link</i>
                         </div>
                         <span>
                             <b style="color: tomato;">ВНИМАНИЕ!</b>
-                                Если ваш видеофайл больше 500 мб необходимо указать ссылку на скачивание.
+                                Если ваш видеофайл больше 500 мб необходимо указать ссылку на видео. Это может быть ссылка на Ютуб, Гугл диск и.т.п)
                             <span class="size_video_file deep-purple-text"></span>
                         </span>
                     </div>
@@ -268,6 +269,10 @@
                         </p>
                     </div>
                 </div>
+                    <a style="display: flex; justify-content: center;align-items: center" href="#" id="reset-form" class="right deep-purple-text">
+                        <i class="small material-icons">clear_all</i>
+                        очистить форму
+                    </a>
             </form>
         </div>
     </div>

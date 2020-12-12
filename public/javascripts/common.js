@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded' , function() {
 
         const modalEl = form.querySelectorAll('.modal');
         const modalInstances = M.Modal.init(modalEl, {dismissible: false})
-
+        const urlVideo = form.querySelector('#txt')
         const ok = document.querySelector('#doneMessage')
         const checkbox = form.querySelector('#check')
         const btn = form.querySelector('#btn-submit-data')
@@ -65,11 +65,10 @@ document.addEventListener('DOMContentLoaded' , function() {
         inputFiles.addEventListener('change', () => {
             const div = form.querySelector('.content-images')
             const divs = div.querySelectorAll('.main-div')
-                if(inputFiles.files.length > 3) {
+                if(inputFiles.files.length > 3 || inputFiles.files.length === 0) {
                     divs.forEach(i => i.remove())
                     errHelper(err)
                 } else {
-                    console.log(divs)
                     if(divs.length >= 3) {
                         divs.forEach(i => i.remove())
                         errHelper(err)
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded' , function() {
                 let file = filesImg[i];
                 const img = document.createElement('img')
                 const div1 = document.createElement('div')
-                div1.classList.add('col', 's12', 'm6', 'l3', 'main-div')
+                div1.classList.add('col', 's6', 'm4', 'l4', 'main-div')
                 const div2 = document.createElement('div')
                 div2.classList.add('card')
                 const div3 = document.createElement('div')
@@ -133,6 +132,9 @@ document.addEventListener('DOMContentLoaded' , function() {
             btn.classList.add('disabled')
             checkbox.disabled = true
             inputFiles.value = ''
+        }
+        function deleteAllImages() {
+            form.querySelectorAll('.main-div').forEach(i => i.remove())
         }
 
         const nominationsData = {
@@ -298,6 +300,24 @@ document.addEventListener('DOMContentLoaded' , function() {
                     modalInstances[0].open()
                 }
             })
+        })
+        urlVideo.addEventListener('change', (e) => {
+            const el = e.target
+            if(el.value) {
+                const i = form.querySelector('.insert_link')
+                i.style.display = 'block'
+                i.addEventListener('click', () => {
+                    console.log('test')
+                    urlVideo.disabled = false
+                    urlVideo.value = ''
+                    video.value = ''
+                })
+            }
+        })
+        form.querySelector('#reset-form').addEventListener('click', () => {
+            deleteAllImages()
+            form.querySelector('.size_video_file').innerHTML = ''
+            form.reset()
         })
     }
 })

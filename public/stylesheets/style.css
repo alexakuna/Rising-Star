@@ -136,12 +136,12 @@ select:not(.browser-default).valid ~ label
   display: flex;
   justify-content: center;
 }
-.content-images,
-.content-images-invoice,
-.content-images-art
-{
-  display: flex;
-}
+/*.content-images,*/
+/*.content-images-invoice,*/
+/*.content-images-art*/
+/*{*/
+/*  display: flex;*/
+/*}*/
 .input-field {
   margin-bottom: 0 !important;
 }
@@ -156,7 +156,15 @@ select:not(.browser-default).valid ~ label
 .btn-floating.btn-small i {
   line-height: 29.4px;
 }
-
+.insert_link {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  text-shadow: gray 1.2px 1.2px 2px;
+  color: #4a148c;
+  cursor: pointer;
+  display: none;
+}
 @media only screen and (max-width:768px) {
   .cls-m {
     margin-left: 0 !important;
