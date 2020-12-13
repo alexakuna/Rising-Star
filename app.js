@@ -3,9 +3,7 @@ const express = require('express')
 const config = require('./config/cnfg')
 const mongoose = require('mongoose')
 const path = require('path')
-//const logger = require('morgan')
 const pdf = require('express-pdf')
-const axios = require('axios')
 const cors = require('cors')
 
 const homeRouter = require('./routes/home')
@@ -23,6 +21,7 @@ const regulationsCircus = require('./routes/regulations/circus')
 const regulationsTheatre = require('./routes/regulations/teatr')
 const regulationsDance = require('./routes/regulations/dance')
 const member = require('./routes/member')
+const orderPdf = require('./middleware/order-pdf')
 const app = express()
 
 // Эмуляция localStorage на бэкенде
@@ -42,16 +41,15 @@ mongoose.connect(config.MONGO_URI, {
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-// app.use(logger('dev'))
 app.use(pdf)
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('*', async (req, res, next) => {
+app.get('*', (req, res, next) => {
     app.locals.activeUrl = req.params[0]
-    if(req.params[0] !== '/pdfFromHTMLString') {
+    if(req.params[0] !== '/RisingStar') {
         localStorage.setItem('url', req.params[0])
     }
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
@@ -81,21 +79,6 @@ app.use(regulationsDance)
 app.use('/submit', member)
 
 //Формирование pdf документа и скачивание
-app.use('/pdfFromHTMLString', (req, res) => {
-    // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
-    const url = localStorage.getItem('url')
-    axios.get(`${config.BASE_URL}${url}`)
-        .then(resp => {
-            const str = resp.data.indexOf('main')
-            const str2 = resp.data.lastIndexOf('main')
-            const result = resp.data.substring(str - 1, str2 + 5)
-        res.pdfFromHTML({
-            filename: `${url.replace('/', '')}.pdf`,
-            htmlContent: result,
-            // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
-            // https://rsfrontend.herokuapp.com
-            options: config.OPTIONS_PDF
-        })
-    }).catch(e => console.log(e))
-})
+app.use('/RisingStar', orderPdf)
+
 module.exports = app

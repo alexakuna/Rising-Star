@@ -41,14 +41,6 @@
                         <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
                     </div>
                     <div class="input-select-genre input-field col s12">
-<!--                        <input-->
-<!--                            class="validate"-->
-<!--                            list="genre"-->
-<!--                            id="gen"-->
-<!--                            name="genre"-->
-<!--                            type="text"-->
-<!--                            required-->
-<!--                        >-->
                         <label for="gen" class="active">Жанр</label>
                         <select class="validate" id="gen" name="genre" required>
                             <option value="" disabled selected></option>
@@ -104,7 +96,7 @@
                         <label for="name_performance" class="active">Назва номеру</label>
                     </div>
                     <div class="input-field col s12">
-                        <input pattern="[0-9]{7,16}" required id="tel" type="text" name="tel" class="validate">
+                        <input pattern="[0-9]{7,16}" required id="tel" type="tel" name="tel" class="validate">
                         <span class="helper-text" data-error="Введіть телефон без пробілів і спецсимволов. Тільки цифри" data-success="&#10004;"></span>
                         <label for="tel" class="active">Телефон без пробілів і спецсимволов. Тільки цифри</label>
                     </div>
@@ -278,6 +270,7 @@
     </div>
 </main>
 <%- include('partials/footer.ejs') %>
+
 <script src="/javascripts/materialize.js" ></script>
 <script src="/javascripts/validate.js"></script>
 <script src="/javascripts/common.js"></script>

@@ -2,13 +2,11 @@
 document.addEventListener('DOMContentLoaded' , function() {
     const form = document.querySelector('.request-form')
     const nav = document.querySelectorAll('.sidenav')
-
     M.Sidenav.init(nav)
-
     if(form) {
-
         const modalEl = form.querySelectorAll('.modal');
         const modalInstances = M.Modal.init(modalEl, {dismissible: false})
+
         const urlVideo = form.querySelector('#txt')
         const ok = document.querySelector('#doneMessage')
         const checkbox = form.querySelector('#check')
@@ -81,11 +79,10 @@ document.addEventListener('DOMContentLoaded' , function() {
         artImages.addEventListener('change', () => {
             const div = form.querySelector('.content-images-art')
             const divs = div.querySelectorAll('.main-div')
-            if(artImages.files.length > 8) {
+            if(artImages.files.length > 8 || artImages.files.length === 0) {
                 divs.forEach(i => i.remove())
                 errHelper(err3)
             } else {
-                console.log(divs)
                 if(divs.length >= 8) {
                     divs.forEach(i => i.remove())
                     errHelper(err3)
@@ -202,14 +199,14 @@ document.addEventListener('DOMContentLoaded' , function() {
         const genreContainer = form.querySelector('#nomination')
         const clearInputNom = form.querySelector('#clear-input')
 
-        form.querySelector('#nom').addEventListener('change', function (e) {
+        form.querySelector('#nom').addEventListener('change',  (e) => {
             if(e.target.value) {
                 clearInputNom.style.display = 'block'
             } else {
                 clearInputNom.style.display = ''
             }
         })
-        clearInputNom.addEventListener('click', function () {
+        clearInputNom.addEventListener('click', () => {
             const nominationInput = form.querySelector('#nom')
             nominationInput.value = ''
             nominationInput.classList.remove('valid')
@@ -318,6 +315,9 @@ document.addEventListener('DOMContentLoaded' , function() {
             deleteAllImages()
             form.querySelector('.size_video_file').innerHTML = ''
             form.reset()
+            if(!form.querySelector('#btn-submit-data').disabled) {
+                form.querySelector('#btn-submit-data').classList.add('disabled')
+            }
         })
     }
 })
