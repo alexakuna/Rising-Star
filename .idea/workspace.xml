@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/regulation/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/regulation/images/groups.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/regulation/images/insta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/regulation/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/regulation/images/youtube.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/order-pdf.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/order-pdf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Art.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Circus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Dance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Instrumental.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Regulation.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Regulation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Regulations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Theatr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/regulations.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/regulations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/art.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/circus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/dance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/instrumental.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/teatr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/regulations/vocal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch/url" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/url" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/card.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/main.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/regulation.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/regulation.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/art.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/circus.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/dance.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/instrumental.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/teatr.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regulations/vocal.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regulations/regulation.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cnfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cnfg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +109,7 @@
       <workItem from="1607807159526" duration="95000" />
       <workItem from="1607807337346" duration="11213000" />
       <workItem from="1608077762079" duration="1038000" />
-      <workItem from="1608510236358" duration="21998000" />
+      <workItem from="1608510236358" duration="22412000" />
     </task>
     <servers />
   </component>
