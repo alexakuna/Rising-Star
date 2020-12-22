@@ -4,8 +4,9 @@ const axios = require('axios')
 
 module.exports = (req, res) => {
     // Перед продакшеном обязатаельно поменять локальный url на url домена где будет сайт
+
     const url = localStorage.getItem('url')
-    axios.get(`${config.BASE_URL}${url}`)
+    axios.get(`${config.BASE_URL}/regulation/${url}`)
         .then(resp => {
             const str = resp.data.indexOf('main')
             const str2 = resp.data.lastIndexOf('main')

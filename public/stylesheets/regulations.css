@@ -9,3 +9,10 @@ main ul > li {
 .btn-color {
     background-color: #4a148c !important;
 }
+h1 {
+    color: #9c27b0;
+}
+.description {
+    font-size: x-large;
+    color: #212121;
+}

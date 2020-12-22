@@ -17,7 +17,6 @@ const schema = new Schema({
     request: {title: String, fields: Array},
     contacts: {title: String, fields: Array},
     button: String
+}, {collection : 'reg'})
 
-}, {collection : 'vocal'})
-
-module.exports = model('Vocal', schema)
+module.exports = model('regulation', schema)

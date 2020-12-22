@@ -4,8 +4,7 @@ const schema = new Schema({
     title: String,
     description: String,
     banner: String,
-    news: Array,
-    navLinks: [{name: String, link: String}]
+    news: Array
 })
 
 module.exports = model('Home', schema)

@@ -12,15 +12,11 @@ router.get('/request',async (req, res) => {
     const home = await Home.find()
     home[0].pages = pag.pages
     home[0].countries = countries.countries
-
     home[0].done = localStorage.getItem('done') || ''
-
     res.render('request', home[0])
-
     if(localStorage.getItem('done')) {
         localStorage.removeItem('done')
     }
-
 })
 
 module.exports = router;

@@ -62,6 +62,7 @@ h1 {
 
 .input-field input[type=text].valid,
 .input-field input[type=email].valid,
+.input-field input[type=tel].valid,
 .input-field select.valid
 {
   border-bottom: 1px solid #4a148c !important;
@@ -74,21 +75,25 @@ h1 {
 }
 input[type=text]:not(.browser-default).valid ~ .helper-text:after,
 input[type=email]:not(.browser-default).valid ~ .helper-text:after,
+input[type=tel]:not(.browser-default).valid ~ .helper-text:after,
 select:not(.browser-default).valid ~ .helper-text:after,
 input[type=text]:not(.browser-default).valid ~ label,
 input[type=email]:not(.browser-default).valid ~ label,
+input[type=tel]:not(.browser-default).valid ~ label,
 select:not(.browser-default).valid ~ label
 {
   color: gold !important;
 }
 .input-field input[type=text]:focus + label,
 .input-field input[type=email]:focus + label,
+.input-field input[type=tel]:focus + label,
 .input-field select:focus + label
 {
   color: #4a148c !important;
 }
 .input-field input[type=text]:focus,
 .input-field input[type=email]:focus,
+.input-field input[type=tel]:focus,
 .input-field select:focus
 {
   border-bottom: 1px solid #4a148c !important;
@@ -136,12 +141,7 @@ select:not(.browser-default).valid ~ label
   display: flex;
   justify-content: center;
 }
-/*.content-images,*/
-/*.content-images-invoice,*/
-/*.content-images-art*/
-/*{*/
-/*  display: flex;*/
-/*}*/
+
 .input-field {
   margin-bottom: 0 !important;
 }

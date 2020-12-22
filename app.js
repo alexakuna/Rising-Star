@@ -14,12 +14,7 @@ const feedbacksRoute = require('./routes/feedbacks')
 const regulationsRoute = require('./routes/regulations')
 const timetableRoute = require('./routes/timetable')
 const videoRoute = require('./routes/video')
-const regulationsVocal = require('./routes/regulations/vocal')
-const regulationsInstrumental = require('./routes/regulations/instrumental')
-const regulationsArt = require('./routes/regulations/art')
-const regulationsCircus = require('./routes/regulations/circus')
-const regulationsTheatre = require('./routes/regulations/teatr')
-const regulationsDance = require('./routes/regulations/dance')
+const regulationRoute = require('./routes/regulations/regulation')
 const member = require('./routes/member')
 const orderPdf = require('./middleware/order-pdf')
 const app = express()
@@ -49,9 +44,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('*', (req, res, next) => {
     app.locals.activeUrl = req.params[0]
-    if(req.params[0] !== '/RisingStar') {
-        localStorage.setItem('url', req.params[0])
-    }
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     app.locals.isVisible = config.ALLOW_IP.some(candidate =>  ip === candidate)
     next()
@@ -67,13 +59,8 @@ app.use(aboutUsRoute)
 app.use(timetableRoute)
 app.use(videoRoute)
 
-// Роутеры для положений
-app.use(regulationsVocal)
-app.use(regulationsArt)
-app.use(regulationsInstrumental)
-app.use(regulationsCircus)
-app.use(regulationsTheatre)
-app.use(regulationsDance)
+// Роутер для положений
+app.use('/regulation', regulationRoute)
 
 //Роутер для отправки заявки
 app.use('/submit', member)

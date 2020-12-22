@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/materialize.min.css'/>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel='stylesheet' href='/stylesheets/regulations.css'/>
     <link rel="icon" href="/images/favicon.ico">
     <title><%=category%></title>
@@ -35,9 +34,9 @@
     <main class="container img-wrapper-background height-main">
         <div class="row">
             <div class="col s12">
-                <h1 style="color: #9c27b0"><%=title%></h1>
-                <p style="font-size: x-large; color: #212121"><%=description.description%> |
-                    <span class="date-text ">
+                <h1><%=title%></h1>
+                <p class="description"><%=description.description%> |
+                    <span class="date-text">
                         <%=description.date%>
                     </span>
                 </p>
@@ -115,7 +114,6 @@
             </div>
         </div>
     </main>
-
     <section class="button">
         <a
             href="/RisingStar"
@@ -126,10 +124,7 @@
             <%=button%>
         </a>
     </section>
-
     <%- include('../partials/footer.ejs') %>
-    <script src="/javascripts/materialize.js" ></script>
-    <script src="/javascripts/common.js"></script>
 </body>
 </html>
 
