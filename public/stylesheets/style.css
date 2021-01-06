@@ -29,7 +29,7 @@ select {
 }
 
 h1 {
-  color: #4a148c;
+  color: gold;
 }
 #btn-close {
   position: absolute;
@@ -164,6 +164,10 @@ select:not(.browser-default).valid ~ label
   color: #4a148c;
   cursor: pointer;
   display: none;
+}
+.no-pad-lr {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 @media only screen and (max-width:768px) {
   .cls-m {
