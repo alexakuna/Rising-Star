@@ -5,29 +5,30 @@
 <%- include('partials/header.ejs') %>
 <main class="container img-wrapper-background height-main">
     <div class="section">
-        <h1 style="line-height: 1.55"><%=title.toUpperCase()%> <span style="color: #512da8"><%=subtitle%></span></h1>
+        <h1><%=title.toUpperCase()%> <span style="color: #512da8"><%=subtitle%></span></h1>
         <blockquote
             style="border-left: 8px solid gold !important;">
             <h5 style="color: #777777"><%=description%></h5>
         </blockquote>
     </div>
+    <% for(let i = 0; sections.length > i; i++) { %>
     <div class="row">
-        <h3 style="color: #512da8" class="header"><%=sections[0].title%></h3>
+        <h3 style="color: #512da8" class="header"><%=sections[i].title%></h3>
         <div class="divider"></div>
         <div class="card">
             <div class="card-image card-content no-pad-lr col s12 m6 l7 xl8">
-                <img src="<%=sections[0].images[0]%>">
+                <img src="<%=sections[i].images[0]%>">
             </div>
             <div class="card-stacked col s12 m6 l5 xl4">
                 <div class="card-content no-pad-lr">
                     <h5 style="margin-top: 0;color: gold"><%=title.toUpperCase()%></h5>
                     <div style="margin-bottom: 8px" class="divider"></div>
-                    <p style="font-size: 16px;line-height: 1.55"><%=sections[0].description[0]%></p>
+                    <p style="font-size: 16px;line-height: 1.55"><%=sections[i].description[0]%></p>
                 </div>
             </div>
         </div>
     </div>
-
+    <% } %>
 </main>
 <%- include('partials/footer.ejs') %>
 
