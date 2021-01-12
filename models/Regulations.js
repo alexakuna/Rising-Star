@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const schema = new Schema({
+    lang: String,
     regulations: [
         {
             img: String,

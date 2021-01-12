@@ -190,6 +190,12 @@ select:not(.browser-default).valid ~ label
   .text-span {
     font-size: 10px;
   }
+  h1 {
+    font-size: 28px !important;
+  }
+  h3 {
+    font-size: 25px !important;
+  }
 }
 
 @media only screen and (max-width:320px) {

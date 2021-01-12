@@ -6,7 +6,8 @@ const Countries = require('../models/Countries')
 const router = Router()
 
 router.get('/request',async (req, res) => {
-    const pages = await Pages.find()
+    const locale = req.cookies['rs2021'] || 'ru'
+    const pages = await Pages.find({lang: locale})
     const countries = await Countries.findById('5fbc25db62f1cd0aba4f088b', 'countries')
     const pag = pages[0]
     const home = await Home.find()

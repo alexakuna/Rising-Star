@@ -3,8 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="251aa317-2092-4047-87e5-3048c62529ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/cnfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cnfg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Regulations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/aboutus.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/aboutus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/feedbacks.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/feedbacks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/regulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/regulations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/timetable.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/timetable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch/url" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/url" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +133,8 @@
       <workItem from="1609851146721" duration="13957000" />
       <workItem from="1610023922836" duration="567000" />
       <workItem from="1610149343832" duration="158000" />
-      <workItem from="1610153307388" duration="378000" />
+      <workItem from="1610153307388" duration="1349000" />
+      <workItem from="1610474820800" duration="6504000" />
     </task>
     <servers />
   </component>

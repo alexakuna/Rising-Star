@@ -4,35 +4,33 @@
             <div class="col l6 s12">
                 <h5 class="white-text"><%=title.toUpperCase()%></h5>
                 <ul style="line-height: 27px">
-                    <li><a class="grey-text text-lighten-3" href="#">Политика конфиденциальности</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Публичный договор</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Частые вопросы</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Полезные статьи</a></li>
+                    <% for(let i = 0; footer.length > i; i++) { %>
+                        <% if(footer[i].show) { %>
+                        <li>
+                            <a class="grey-text
+                             text-lighten-3"
+                               href="<%=footer[i].url%>"
+                            >
+                                <%=footer[i].title%>
+                            </a>
+                        </li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Наши соцсети:</h5>
+                <h5 class="white-text"><%= footer2.title %></h5>
                 <ul style="line-height: 28px">
-                    <li><a style="display: flex" class="grey-text text-lighten-3" href="https://www.facebook.com/risingstarfest">
+                    <% for(let i = 0; footer2.social.length > i; i++) { %>
+                        <% if(footer2.social[i].show) { %>
+                    <li>
+                        <a style="display: flex" class="grey-text text-lighten-3" href="<%= footer2.social[i].url %>">
                             <span style="padding-right: 1.5px" class="material-icons">facebook</span>
-                            Офф. страница в Facebook</a></li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/241749626977021">
-                            <img alt="facebook" style="width: 22px;margin-bottom: -5px;" src="images/groups.png"/>
-                            Группа в Facebook</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UC4FXUksE4e2iSdWYOJeU-EA">
-                            <img alt="instagram" style="width: 22px;margin-bottom: -5px;" src="images/youtube.png"/>
-                             Канал на YouTube
+                            <%= footer2.social[i].title %>
                         </a>
                     </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="https://www.instagram.com/1rising_star1/?igshid=1wa8yijvddcmu">
-                            <img alt="instagram" style="width: 22px" src="images/insta.png"/>
-                            Instagram
-                        </a>
-                    </li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </div>
         </div>

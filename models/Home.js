@@ -17,7 +17,9 @@ const schema = new Schema({
                 default: Date.now
             }
         }
-    ]
+    ],
+    footer: [{title: String, url: String, show: Boolean}],
+    footer2: {title: String, social: Array}
 }, {collection: 'homes'})
 
 module.exports = model('Home', schema)

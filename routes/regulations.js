@@ -7,8 +7,9 @@ const Regulations = require('../models/Regulations')
 const router = Router()
 
 router.get('/regulations',async (req, res) => {
-    const home = await Home.find()
-    const pages = await Pages.find()
+    const locale = req.cookies['rs2021'] || 'ru'
+    const home = await Home.find({lang: locale})
+    const pages = await Pages.find({lang: locale})
     const regulations1 = await Regulations.find()
     const pag = pages[0]
     home[0].pages = pag.pages
