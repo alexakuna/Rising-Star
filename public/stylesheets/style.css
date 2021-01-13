@@ -17,7 +17,8 @@ select {
   outline: none !important;
 }
 .m-right {
-  margin-right: 60px;
+  margin-right: 80px;
+  border-right: 2px solid white;
 }
 .nav {
   line-height: 46px !important;
@@ -48,10 +49,16 @@ h1 {
 #btn-close a span {
   font-size: 34px !important;
 }
-.login-wrapper {
+.lang-wrapper {
   position: absolute;
-  display: inline-block;
   right: 10px;
+}
+.lang-wrapper a {
+  padding: 0.3rem;
+}
+.login-wrapper a {
+  color: white;
+  text-decoration: none;
 }
 .r-logo {
   margin-left: 10px;

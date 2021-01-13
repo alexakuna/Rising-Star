@@ -1,8 +1,12 @@
 <header>
     <nav class="z-depth-0 purple darken-4">
         <div class="nav-wrapper">
-            <a href="/" class="brand-logo"><img class="cls-m-m cls-m cls-m-s" style="width: 44px;display: inline-block; height: 100%; margin-top: 10px;margin-left:10px" src="./images/logo.png" alt="Rising Star | Конкурс-Фестиваль" /></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="/" class="brand-logo">
+                <img class="cls-m-m cls-m cls-m-s" style="width: 44px;display: inline-block; height: 100%; margin-top: 10px;margin-left:10px" src="./images/logo.png" alt="Rising Star" />
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
             <ul class="right hide-on-med-and-down m-right">
                 <% for(let i = 0; pages.length > i; i++) { %>
                 <% if(pages[i].show) { %>
@@ -12,11 +16,10 @@
                     <% } %>
                 <% } %>
             </ul>
-            <% if(isVisible) { %>
-                <div class="login-wrapper">
-                    <span><a href="https://rsve.herokuapp.com/">Вход</a></span>
-                </div>
-            <% } %>
+            <div class="lang-wrapper">
+                <a href="/ru">RU</a>
+                <a href="/en">EN</a>
+            </div>
         </div>
     </nav>
 

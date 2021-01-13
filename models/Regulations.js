@@ -2,13 +2,15 @@ const { Schema, model } = require('mongoose')
 
 const schema = new Schema({
     lang: String,
+    titleReg: String,
     regulations: [
         {
             img: String,
             title: String,
             url: String,
             show: Boolean,
-            id: String
+            id: {type:String, default: ''},
+            textBtn: String
         }
     ]
 })

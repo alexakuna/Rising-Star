@@ -47,25 +47,29 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('*', (req, res, next) => {
     if(!Object.keys(req.cookies).length) {
-        res.cookie('rs2021', 'ru', {maxAge: 900000, httpOnly: true})
+        res.cookie('rs2021', 'ru', {maxAge: 3600 * 24, httpOnly: true})
     }
-    app.locals.activeUrl = req.params[0]
+    if(req.params[0] === '/en' || req.params[0] === '/ru') {
+
+    } else {
+        app.locals.activeUrl = req.params[0]
+    }
     const ip = req.header('x-forwarded-for') || req.connection.remoteAddress
     app.locals.isVisible = config.ALLOW_IP.some(candidate =>  ip === candidate)
     next()
 })
 
-app.use('/ua', function(req, res, next) {
-    res.cookie('rs2021', 'ua', { maxAge: 900000, httpOnly: true })
-    res.redirect('/')
+// app.use('/ua', function(req, res, next) {
+//     res.cookie('rs2021', 'ua', { maxAge: 900000, httpOnly: true })
+//     res.redirect('/')
+// });
+app.use('/en', function(req, res) {
+    res.cookie('rs2021', 'en', { maxAge: 3600 * 24, httpOnly: true })
+    res.redirect(app.locals.activeUrl)
 });
-app.use('/en', function(req, res, next) {
-    res.cookie('rs2021', 'en', { maxAge: 900000, httpOnly: true })
-    res.redirect('/')
-});
-app.use('/ru', function(req, res, next) {
-    res.cookie('rs2021', 'ru', { maxAge: 900000, httpOnly: true })
-    res.redirect('/')
+app.use('/ru', function(req, res) {
+    res.cookie('rs2021', 'ru', { maxAge: 3600 * 24, httpOnly: true })
+    res.redirect(app.locals.activeUrl)
 });
 
 // Роутеры навигации
