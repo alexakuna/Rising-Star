@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded' , function() {
             const data = {
                 nomination: e.target.value
             }
-            fetch('http://localhost:4200/get-nomination-data', {
+            fetch('https://rsfrontend.herokuapp.com/get-nomination-data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
