@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded' , function() {
     const nav = document.querySelectorAll('.sidenav')
     M.Sidenav.init(nav)
     if(form) {
+
         const modalEl = form.querySelectorAll('.modal');
         const modalInstances = M.Modal.init(modalEl, {dismissible: false})
 
@@ -31,8 +32,8 @@ document.addEventListener('DOMContentLoaded' , function() {
         video.addEventListener('change', () => {
             if (video.files.length) {
                 form.querySelector('.size_video_file')
-                    .innerHTML = `Текущий размер файла: ${(video.files[0].size / 1000000).toFixed()} mb`
-                if (video.files[0].size > 1024 * 1024 * 477) {
+                    .innerHTML = `Size: ${(video.files[0].size / 1000000).toFixed()} mb`
+                if (video.files[0].size > 1024 * 1024 * 300) {
                     checkbox.checked = false
                     form.querySelector('.error-text-video').style.display = 'block'
                     btn.classList.add('disabled')
@@ -133,68 +134,6 @@ document.addEventListener('DOMContentLoaded' , function() {
         function deleteAllImages() {
             form.querySelectorAll('.main-div').forEach(i => i.remove())
         }
-
-        const nominationsData = {
-            vocal: [
-                'Академічний',
-                'Естрадний',
-                'Народний',
-                'Бітбокс',
-                'Мюзікл',
-                'Театр пісні',
-                'ВІА',
-                'Джаз',
-                'Хори',
-                'ПОП',
-                'Барди',
-                'Духовна музика'
-            ],
-            instrumental: [
-                'Фортепіано (соліст / дует / ансамбль)',
-                'Струнні інструменти: скрипка, альт, віолончель, арфа, контрабас (соліст / дует / ансамбль / колектив)',
-                'Духові та ударні інструменти: блок-флейта, флейта, саксофон, кларнет, гобой, труба, ударні інструменти та ін. (Соліст / дует / ансамбль / колектив)',
-                'Народні інструменти: баян, акордеон, балалайка, домра, гітара та ін. (Соліст / дует / ансамбль / колектив)',
-                'Електромузичні (соліст / дует / ансамбль / колектив)',
-                'Змішані ансамблі (дует / ансамбль / колектив)'
-            ],
-            art: [
-                'Образотворче мистецтво',
-                'Фото і відео творчість\n (фотомайстерні, фотовиставки, студії, автори)',
-                'Декоративно-прикладна творчість і дизайн\n (художні майстерні, студії, самостійні майстри)'
-            ],
-            circus: [
-                'Акробатика: партерна, стрибкова, парна, силова (соло і групи), жіночі «Трійки», художньо-акробатичні групи, каучук, клішнік, пластичні етюди та ін.',
-                'Еквілібристика: еквілібрування на котушках, еквілібрування на моноциклі, антипод',
-                'Жонглювання',
-                'Клоунада',
-                'Фокуси (ілюзійний жанр)',
-                'Орігінальний жанр: пантоміма, «хула-хупи», «батоги», «ласо», «Диаболо», ексцентрика, і інш.'
-            ],
-            dances: [
-                'Театральні студії',
-                'Театральні колективи',
-                'Мюзікли',
-                'Театри в танці',
-                'Лялькові театри',
-                'Театри мод',
-                'Читці',
-                'Виконавці індивідуальних номерів',
-                'Гуморина'
-            ],
-            theater: [
-                'Ритмічність - вміння раціональне і правильне використання рухів для вираження основної думки хореографічного твору!',
-                'Відповідність рухів заданої танцювальному стилю (напрямку).',
-                'Техніка виконання',
-                'Складність репертуару',
-                'Артистизм- вміння перевтілюватися в обраний образ, міміка.',
-                'Синхронність.',
-                'Композиція (малюнок танцю) - переміщення по майданчику.',
-                'Вибір танцювальних елементів.',
-                'Фігури танцю, їх варіації.',
-                'Взаємодія танцюристів один з одним.',
-                "Використання зв'язок між елементами танцю, відсутність необгрунтованих пауз."
-            ]
-        }
         const genre = form.querySelector('#gen')
         const genreContainer = form.querySelector('#nomination')
         const clearInputNom = form.querySelector('#clear-input')
@@ -218,11 +157,24 @@ document.addEventListener('DOMContentLoaded' , function() {
             const nominationInput = form.querySelector('#nom')
             nominationInput.value = ''
             if(options.length) options.forEach(i => i.remove())
-            nominationsData[e.target.value].forEach(i => {
-                const option = document.createElement('option')
-                option.value = i
-                genreContainer.appendChild(option)
+            const data = {
+                nomination: e.target.value
+            }
+            fetch('http://localhost:4200/get-nomination-data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(data)
             })
+                .then(data => data.json())
+                .then(result => {
+                    result.data[0][e.target.value].forEach(i => {
+                        const option = document.createElement('option')
+                        option.value = i
+                        genreContainer.appendChild(option)
+                    })
+                })
         }
         function hideOrVisibleInputFotArt(e) {
             const art = form.querySelector('.art-block-images')
@@ -291,7 +243,6 @@ document.addEventListener('DOMContentLoaded' , function() {
                 rules: 'required'
             }], function(errors, event) {
                 if (errors.length > 0) {
-                    // Show the errors
                     event.preventDefault()
                 } else {
                     modalInstances[0].open()

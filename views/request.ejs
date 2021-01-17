@@ -13,45 +13,42 @@
                 method="POST"
                 enctype="multipart/form-data"
             >
-                <h2 style="margin-top: 0;margin-bottom: 25px;color: #4a148c">Заявка</h2>
+                <h2 style="margin-top: 0;margin-bottom: 25px;color: #4a148c"><%=requestPage.titleRegulation%></h2>
                 <div style="margin-bottom: 0" class="row">
                     <div class="input-field col s12">
                         <input id="cntr" class="validate" list="country" name="country" type="text" required>
-                        <span class="helper-text" data-error="Выберите страну" data-success="&#10004;"></span>
-                        <label for="cntr" class="active">Країна</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[0]%>" data-success="&#10004;"></span>
+                        <label for="cntr" class="active"><%=requestPage.titles.country%></label>
                         <datalist id="country">
-                            <% for(let i in countries) { %>
-                            <option value="<%=countries[i]%>"></option>
+                            <% for(let i in requestPage.countries) { %>
+                                <option value="<%=requestPage.countries[i]%>"></option>
                             <% } %>
                         </datalist>
                     </div>
                     <div class="input-field col s12">
                         <input required id="city" type="text" name="city" class="validate">
-                        <span class="helper-text" data-error="Выберите город" data-success="&#10004;"></span>
-                        <label for="city" class="active">Місто</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[1]%>" data-success="&#10004;"></span>
+                        <label for="city" class="active"><%=requestPage.titles.city%></label>
                     </div>
                     <div class="input-field col s12">
                         <input required id="name_organisation" type="text" name="name_organisation" class="validate">
-                        <span class="helper-text" data-error="ім’я керівника або назва студіі" data-success="&#10004;"></span>
-                        <label for="name_organisation" class="active">Керівник або студія (ім’я або назва)</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[2]%>" data-success="&#10004;"></span>
+                        <label for="name_organisation" class="active"><%=requestPage.titles.boss%></label>
                     </div>
                     <div class="input-field col s12">
                         <input required id="pip" type="text" name="pip" class="validate">
-                        <span class="helper-text" data-error="Введіть прізвище, ім’я, по батькові учасника (англійською мовою)" data-success="&#10004;"></span>
-                        <label for="pip" class="active">Прізвище, ім’я, по батькові <b>учасника</b> (англійською мовою)</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[3]%>" data-success="&#10004;"></span>
+                        <label for="pip" class="active"><%=requestPage.titles.participant%></label>
                     </div>
                     <div class="input-select-genre input-field col s12">
-                        <label for="gen" class="active">Жанр</label>
+                        <label for="gen" class="active"><%=requestPage.titles.genre%></label>
                         <select class="validate" id="gen" name="genre" required>
                             <option value="" disabled selected></option>
-                            <option value="vocal">Вокал</option>
-                            <option value="instrumental">Инструментал</option>
-                            <option value="art">АРТ</option>
-                            <option value="circus">Цирк</option>
-                            <option value="dances">Танцы</option>
-                            <option value="theater">Театр</option>
+                            <% for(let item = 0; Object.keys(requestPage.genres).length > item; item++) { %>
+                                <option value="<%=Object.keys(requestPage.genres)[item]%>"><%=requestPage.genres[Object.keys(requestPage.genres)[item]]%></option>
+                            <% } %>
                         </select>
-                        <span class="helper-text" data-error="Выберите жанр" data-success="&#10004;"></span>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[4]%>" data-success="&#10004;"></span>
                     </div>
                     <div class="input-field col s12">
                         <input
@@ -63,8 +60,8 @@
                             required
                             autocomplete="off"
                         >
-                        <span class="helper-text" data-error="Выберите номінацію" data-success="&#10004;"></span>
-                        <label for="nom" class="active">Номінація</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[5]%>" data-success="&#10004;"></span>
+                        <label for="nom" class="active"><%=requestPage.titles.nomination%></label>
                         <a
                             class="btn-floating btn-small waves-effect waves-light red"
                             id="clear-input"
@@ -73,42 +70,39 @@
                         </a>
                         <datalist id="nomination">
                             <!--To render nominations-->
+                            <input id="contentDataNomination" value="<%-requestPage.nominationsData%>" type="text" hidden>
                         </datalist>
                     </div>
                     <div class="input-field col s12">
                         <input id="ag" list="age" class="validate" type="text" name="age" required>
-                        <span class="helper-text" data-error="Выберите вікову категорію" data-success="&#10004;"></span>
-                        <label for="ag" class="active">Вікова категорія</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[6]%>" data-success="&#10004;"></span>
+                        <label for="ag" class="active"><%=requestPage.titles.age%></label>
                         <datalist id="age">
-                            <option value="3-6 років"></option>
-                            <option value="7-9 років"></option>
-                            <option value="10-12 років"></option>
-                            <option value="13-16 років"></option>
-                            <option value="17-25 років"></option>
-                            <option value="26 років та більше"></option>
-                            <option value="змішана вікова категорія"></option>
+                            <% for(let i in requestPage.ages) { %>
+                            <option value="<%=requestPage.ages[i]%>"></option>
+                            <% } %>
                         </datalist>
                     </div>
 
                     <div class="input-field col s12">
                         <input required id="name_performance" type="text" name="name_performance" class="validate">
-                        <span class="helper-text" data-error="Введіть назву номеру" data-success="&#10004;"></span>
-                        <label for="name_performance" class="active">Назва номеру</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[7]%>" data-success="&#10004;"></span>
+                        <label for="name_performance" class="active"><%=requestPage.titles.presentation%></label>
                     </div>
                     <div class="input-field col s12">
                         <input pattern="[0-9]{7,16}" required id="tel" type="tel" name="tel" class="validate">
-                        <span class="helper-text" data-error="Введіть телефон без пробілів і спецсимволов. Тільки цифри" data-success="&#10004;"></span>
-                        <label for="tel" class="active">Телефон без пробілів і спецсимволов. Тільки цифри</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[8]%>" data-success="&#10004;"></span>
+                        <label for="tel" class="active"><%=requestPage.titles.tel%></label>
                     </div>
                     <div class="input-field col s12">
                         <input required id="email" type="email" name="email" class="validate">
-                        <span class="helper-text" data-error="Введіть електронну адресу" data-success="&#10004;"></span>
-                        <label for="email" class="active">Електронна адреса</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[9]%>" data-success="&#10004;"></span>
+                        <label for="email" class="active"><%=requestPage.titles.email%></label>
                     </div>
                     <div class="input-field col s12">
                         <input required id="pip_getter" type="text" name="pip_getter" class="validate">
-                        <span class="helper-text" data-error="Необхідно заповнити це поле" data-success="&#10004;"></span>
-                        <label for="pip_getter" class="active">Ім'я пошти, номер отд. або індекс, ПІБ і телефон одержувача.</label>
+                        <span class="helper-text" data-error="<%=requestPage.errorsMessage[10]%>" data-success="&#10004;"></span>
+                        <label for="pip_getter" class="active"><%=requestPage.titles.index%></label>
                     </div>
                 </div>
                 <div class="raw art-block-images" style="display: none">
@@ -132,7 +126,7 @@
                                 <!--To render preview images-->
                             </div>
                         </div>
-                        <span class="error-text-images-art">Максимально допустиме кількість файлів - 8</span>
+                        <span class="error-text-images-art"><%=requestPage.errorsMessage[11]%></span>
                     </div>
                 </div>
                 <div class="raw">
@@ -140,7 +134,7 @@
                         <div
                             style="background-color: #4a148c !important; width: 100%"
                             class="scale-transition btn waves-effect waves-light">
-                            <span class="text-span">Фото учасника. Максимум - 3 фотографії</span>
+                            <span class="text-span"><%=requestPage.titles.imagesParticipant%></span>
                             <input
                                 required
                                 type="file"
@@ -157,7 +151,7 @@
                                     <!--To render preview images-->
                                 </div>
                             </div>
-                        <span class="error-text-images">Максимально допустиме кількість файлів - 3</span>
+                        <span class="error-text-images"><%=requestPage.errorsMessage[12]%></span>
                     </div>
                 </div>
                 <div class="raw">
@@ -166,7 +160,7 @@
                             style="background-color: #4a148c !important; width: 100%"
                             class="scale-transition btn waves-effect waves-light"
                         >
-                            <span class="text-span">Фотографія чека</span>
+                            <span class="text-span"><%=requestPage.titles.screenCheck%></span>
                             <input
                                 required
                                 type="file"
@@ -182,11 +176,11 @@
                                 <!--To render preview images-->
                             </div>
                         </div>
-                        <span class="error-text-invoice">Фотографія чека обов'язкове. Одно фото.</span>
+                        <span class="error-text-invoice"><%=requestPage.errorsMessage[13]%></span>
                     </div>
                      <span>
                          <i class="material-icons invoice_icon">error_outline</i>
-                          Фотографія чека який підтверджує благодійний внесок.
+                          <%=requestPage.titles.isCheck%>
                      </span>
                 </div>
                 <div class="raw">
@@ -195,7 +189,7 @@
                             style="background-color: #4a148c !important; width: 100%"
                             class="scale-transition btn waves-effect waves-light"
                         >
-                            <span class="text-span">Добавити відео файл</span>
+                            <span class="text-span"><%=requestPage.titles.video%></span>
                             <input
                                 id="video-file"
                                 type="file"
@@ -204,21 +198,22 @@
                                 accept="video/quicktime,video/mp4,video/mpeg,video/webm"
                             >
                         </div>
-                        <span class="error-text-video">Допустимый размер файла превышен.</span>
+                        <span class="error-text-video"><%=requestPage.errorsMessage[14]%></span>
 
                         <div class="file-path-wrapper file-field input-field">
                             <input
-                                placeholder="Или добавте ссылку на видео"
+                                placeholder="<%=requestPage.titles.link%>"
                                 id="txt"
                                 class="file-path"
                                 name="text"
                                 type="text"
+                                required
                             >
                             <i class="material-icons insert_link">insert_link</i>
                         </div>
                         <span>
-                            <b style="color: tomato;">ВНИМАНИЕ!</b>
-                                Если ваш видеофайл больше 500 мб необходимо указать ссылку на видео. Это может быть ссылка на Ютуб, Гугл диск и.т.п)
+                            <b style="color: tomato;"><%=requestPage.titles.note%></b>
+                                <%=requestPage.titles.size%>
                             <span class="size_video_file deep-purple-text"></span>
                         </span>
                     </div>
@@ -232,7 +227,7 @@
                             name="check_box"
                             required
                         />
-                        <span>Я согласен с обработкой персональных данных</span>
+                        <span><%=requestPage.titles.agree%></span>
                     </label>
                 </p>
                 <div style="display: flex; justify-content: center;align-items: center;margin-bottom: 25px;">
@@ -242,7 +237,7 @@
                         class="btn waves-effect waves-light disabled"
                         type="submit"
                     >
-                        Отправить
+                        <%=requestPage.titles.send%>
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
@@ -254,16 +249,16 @@
                         </div>
                         <p>
                             <i class="material-icons">error_outline</i>
-                            Заявка обрабатывается не перезагружайте страницу. Дождитесь зарузки данных на сервер.
+                            <%=requestPage.loadInfo.load%>
                         </p>
                         <p>
-                            <i>Время обработки данных зависит от размера видеофайла который вы прикрепили к заявке и скорости вашего интернета.</i>
+                            <i><%=requestPage.loadInfo.note%></i>
                         </p>
                     </div>
                 </div>
                     <a style="display: flex; justify-content: center;align-items: center" href="#" id="reset-form" class="right deep-purple-text">
                         <i class="small material-icons">clear_all</i>
-                        очистить форму
+                        <%=requestPage.titles.reset%>
                     </a>
             </form>
         </div>

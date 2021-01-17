@@ -12,6 +12,7 @@ const aboutUsRoute = require('./routes/aboutus')
 const contactsRoute = require('./routes/contacts')
 const feedbacksRoute = require('./routes/feedbacks')
 const regulationsRoute = require('./routes/regulations')
+const nominationsRoute = require('./routes/nominations')
 const timetableRoute = require('./routes/timetable')
 const videoRoute = require('./routes/video')
 const regulationRoute = require('./routes/regulations/regulation')
@@ -47,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('*', (req, res, next) => {
     if(!Object.keys(req.cookies).length) {
-        res.cookie('rs2021', 'ru', {maxAge: 3600 * 24, httpOnly: true})
+        res.cookie('rs2021', 'ru', {maxAge: 3600000 * 24, httpOnly: true})
     }
     if(req.params[0] === '/en' || req.params[0] === '/ru') {
 
@@ -64,11 +65,11 @@ app.get('*', (req, res, next) => {
 //     res.redirect('/')
 // });
 app.use('/en', function(req, res) {
-    res.cookie('rs2021', 'en', { maxAge: 3600 * 24, httpOnly: true })
+    res.cookie('rs2021', 'en', { maxAge: 3600000 * 24, httpOnly: true })
     res.redirect(app.locals.activeUrl)
 });
 app.use('/ru', function(req, res) {
-    res.cookie('rs2021', 'ru', { maxAge: 3600 * 24, httpOnly: true })
+    res.cookie('rs2021', 'ru', { maxAge: 3600000 * 24, httpOnly: true })
     res.redirect(app.locals.activeUrl)
 });
 
@@ -83,6 +84,7 @@ app.use(timetableRoute)
 app.use(videoRoute)
 app.use(footerSection)
 
+app.use('/get-nomination-data', nominationsRoute)
 // Роутер для положений
 app.use('/regulation', regulationRoute)
 
