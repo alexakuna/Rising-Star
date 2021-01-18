@@ -16,3 +16,14 @@ h1 {
     font-size: x-large;
     color: #212121;
 }
+.lang-wrapper {
+    position: absolute;
+    right: 10px;
+}
+.lang-wrapper a {
+    padding: 0.3rem;
+}
+.login-wrapper a {
+    color: white;
+    text-decoration: none;
+}
